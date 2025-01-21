@@ -8,44 +8,544 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">2,388</td><td></td><td></td></tr>
+<tr><th colspan="8">Suite</th></tr>
+<tr><td><a href="#t0">admin</a></td><td class="num">113</td><td class="num">0</td><td class="num">0</td><td class="num attn">31</td><td class="num">28,278</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">admin.ImageController</td><td><a href="#m0">Test02GetImages</a></td><td rowspan="1">1737184789570</td><td rowspan="1">2340</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">admin &#8212; failed</th></tr><tr class="failedeven"><td rowspan="4">admin.BidController</td><td><a href="#m0">Test01PutBidUpdate</a></td><td rowspan="1">1737459352021</td><td rowspan="1">7</td></tr><tr class="failedeven"><td><a href="#m1">Test06GetBidCount</a></td><td rowspan="1">1737459352198</td><td rowspan="1">26</td></tr><tr class="failedeven"><td><a href="#m2">Test08GetMyBid</a></td><td rowspan="1">1737459352227</td><td rowspan="1">28</td></tr><tr class="failedeven"><td><a href="#m3">Test09GetLoseCount</a></td><td rowspan="1">1737459352256</td><td rowspan="1">26</td></tr><tr class="failedodd"><td rowspan="1">admin.BidderSupplierSummaryController</td><td><a href="#m4">test03GetDetailedBidderSummary</a></td><td rowspan="1">1737459342981</td><td rowspan="1">45</td></tr><tr class="failedeven"><td rowspan="1">admin.BrandController</td><td><a href="#m5">test04PostBrandExcel</a></td><td rowspan="1">1737459352631</td><td rowspan="1">12</td></tr><tr class="failedodd"><td rowspan="1">admin.CompanyController</td><td><a href="#m6">test03PostCompany</a></td><td rowspan="1">1737459345007</td><td rowspan="1">78</td></tr><tr class="failedeven"><td rowspan="1">admin.CutController</td><td><a href="#m7">test02PostCut</a></td><td rowspan="1">1737459345387</td><td rowspan="1">33</td></tr><tr class="failedodd"><td rowspan="1">admin.DatabaseBackupController</td><td><a href="#m8">test02GetStatus</a></td><td rowspan="1">1737459346576</td><td rowspan="1">32</td></tr><tr class="failedeven"><td rowspan="1">admin.FluoresceneController</td><td><a href="#m9">test02PostFluorescene</a></td><td rowspan="1">1737459348116</td><td rowspan="1">30</td></tr><tr class="failedodd"><td rowspan="2">admin.ForgotPasswordController</td><td><a href="#m10">test01AuthResetPassword</a></td><td rowspan="1">1737459348382</td><td rowspan="1">44</td></tr><tr class="failedodd"><td><a href="#m11">test02AuthForgotPassword</a></td><td rowspan="1">1737459348427</td><td rowspan="1">52</td></tr><tr class="failedeven"><td rowspan="1">admin.GSBController</td><td><a href="#m12">loginToSystem</a></td><td rowspan="1">1737459348481</td><td rowspan="1">46</td></tr><tr class="failedodd"><td rowspan="2">admin.ImageController</td><td><a href="#m13">Test02GetImages</a></td><td rowspan="1">1737459353999</td><td rowspan="1">794</td></tr><tr class="failedodd"><td><a href="#m14">Test03GetFetchImages</a></td><td rowspan="1">1737459354794</td><td rowspan="1">456</td></tr><tr class="failedeven"><td rowspan="2">admin.LabController</td><td><a href="#m15">Test02Lab</a></td><td rowspan="1">1737459355555</td><td rowspan="1">26</td></tr><tr class="failedeven"><td><a href="#m16">Test03LabExcel</a></td><td rowspan="1">1737459355582</td><td rowspan="1">10</td></tr><tr class="failedodd"><td rowspan="1">admin.LedgerController</td><td><a href="#m17">test02Ledger</a></td><td rowspan="1">1737459349131</td><td rowspan="1">30</td></tr><tr class="failedeven"><td rowspan="2">admin.LotController</td><td><a href="#m18">test06DownloadLotExcel</a></td><td rowspan="1">1737459355718</td><td rowspan="1">25</td></tr><tr class="failedeven"><td><a href="#m19">test07BiddersPdf</a></td><td rowspan="1">1737459355744</td><td rowspan="1">91</td></tr><tr class="failedodd"><td rowspan="5">admin.LotDiamondBidController</td><td><a href="#m20">test04LotDiamondRemark</a></td><td rowspan="1">1737459349427</td><td rowspan="1">14</td></tr><tr class="failedodd"><td><a href="#m21">test07LotDiamondFavourites</a></td><td rowspan="1">1737459349530</td><td rowspan="1">29</td></tr><tr class="failedodd"><td><a href="#m22">test08LotDiamondGetWinBids</a></td><td rowspan="1">1737459349560</td><td rowspan="1">32</td></tr><tr class="failedodd"><td><a href="#m23">test11GetMyBids</a></td><td rowspan="1">1737459349774</td><td rowspan="1">27</td></tr><tr class="failedodd"><td><a href="#m24">test12GetLoseBids</a></td><td rowspan="1">1737459349802</td><td rowspan="1">29</td></tr><tr class="failedeven"><td rowspan="1">admin.LotDiamondExcelController</td><td><a href="#m25">loginToSystem</a></td><td rowspan="1">1737459349833</td><td rowspan="1">167</td></tr><tr class="failedodd"><td rowspan="1">admin.RefreshTokencontroller</td><td><a href="#m26">Test01GetAuthRefreshToken</a></td><td rowspan="1">1737459364891</td><td rowspan="1">31</td></tr><tr class="failedeven"><td rowspan="1">admin.RemarkController</td><td><a href="#m27">Test03RemarkCount</a></td><td rowspan="1">1737459364963</td><td rowspan="1">28</td></tr><tr class="failedodd"><td rowspan="1">admin.ReservationController</td><td><a href="#m28">Test01PostSlotTransaction</a></td><td rowspan="1">1737459364992</td><td rowspan="1">0</td></tr><tr class="failedeven"><td rowspan="1">admin.ReservationTransactionController</td><td><a href="#m29">test01PostCreateReservation</a></td><td rowspan="1">1737459350327</td><td rowspan="1">131</td></tr><tr class="failedodd"><td rowspan="1">admin.UserController</td><td><a href="#m30">test07GetKycByUserId</a></td><td rowspan="1">1737459340905</td><td rowspan="1">74</td></tr><tr><th colspan="4">admin &#8212; passed</th></tr><tr class="passedeven"><td rowspan="18">admin.AuctionController</td><td><a href="#m31">test01PutAuctionId</a></td><td rowspan="1">1737459341598</td><td rowspan="1">69</td></tr><tr class="passedeven"><td><a href="#m32">test02DeleteAuctionId</a></td><td rowspan="1">1737459341668</td><td rowspan="1">51</td></tr><tr class="passedeven"><td><a href="#m33">test03PostAuction</a></td><td rowspan="1">1737459341721</td><td rowspan="1">56</td></tr><tr class="passedeven"><td><a href="#m34">test04PostAuctionSupplierUpdateEmails</a></td><td rowspan="1">1737459341779</td><td rowspan="1">53</td></tr><tr class="passedeven"><td><a href="#m35">test05PostAuctionSentEmails</a></td><td rowspan="1">1737459341833</td><td rowspan="1">50</td></tr><tr class="passedeven"><td><a href="#m36">test06GetAuctions</a></td><td rowspan="1">1737459341884</td><td rowspan="1">143</td></tr><tr class="passedeven"><td><a href="#m37">test07GetAuctionView</a></td><td rowspan="1">1737459342028</td><td rowspan="1">41</td></tr><tr class="passedeven"><td><a href="#m38">test08GetAuctionsUpcoming</a></td><td rowspan="1">1737459342070</td><td rowspan="1">86</td></tr><tr class="passedeven"><td><a href="#m39">test09GetAuctionsUpcomingJewellery</a></td><td rowspan="1">1737459342158</td><td rowspan="1">50</td></tr><tr class="passedeven"><td><a href="#m40">test10GetAuctionsUpcomingDiamond</a></td><td rowspan="1">1737459342209</td><td rowspan="1">46</td></tr><tr class="passedeven"><td><a href="#m41">test11GetAuctionsJewellery</a></td><td rowspan="1">1737459342256</td><td rowspan="1">48</td></tr><tr class="passedeven"><td><a href="#m42">test12GetAuctionsInactive</a></td><td rowspan="1">1737459342306</td><td rowspan="1">51</td></tr><tr class="passedeven"><td><a href="#m43">test13GetAuctionsFinishedJewellery</a></td><td rowspan="1">1737459342358</td><td rowspan="1">52</td></tr><tr class="passedeven"><td><a href="#m44">test14GetSAuctionFinishedDiamond</a></td><td rowspan="1">1737459342414</td><td rowspan="1">46</td></tr><tr class="passedeven"><td><a href="#m45">test15GetAuctionsFinishedAndEndDiamond</a></td><td rowspan="1">1737459342463</td><td rowspan="1">47</td></tr><tr class="passedeven"><td><a href="#m46">test16GetAuctionsEvents</a></td><td rowspan="1">1737459342512</td><td rowspan="1">54</td></tr><tr class="passedeven"><td><a href="#m47">test17GetAuctionsDiamond</a></td><td rowspan="1">1737459342568</td><td rowspan="1">40</td></tr><tr class="passedeven"><td><a href="#m48">test18GetAuctionByActive</a></td><td rowspan="1">1737459342610</td><td rowspan="1">46</td></tr><tr class="passedodd"><td rowspan="2">admin.AuthenticationController</td><td><a href="#m49">test01AuthRegister</a></td><td rowspan="1">1737459342659</td><td rowspan="1">146</td></tr><tr class="passedodd"><td><a href="#m50">test02AuthRegisterAll</a></td><td rowspan="1">1737459342808</td><td rowspan="1">76</td></tr><tr class="passedeven"><td rowspan="1">admin.BalanceSheetController</td><td><a href="#m51">Test01BalanceSheet</a></td><td rowspan="1">1737459350955</td><td rowspan="1">1064</td></tr><tr class="passedodd"><td rowspan="6">admin.BidController</td><td><a href="#m52">Test02PutBidUpdateJewellery</a></td><td rowspan="1">1737459352030</td><td rowspan="1">31</td></tr><tr class="passedodd"><td><a href="#m53">Test03PostMakeWinners</a></td><td rowspan="1">1737459352062</td><td rowspan="1">35</td></tr><tr class="passedodd"><td><a href="#m54">Test04GetBiddersInfo</a></td><td rowspan="1">1737459352097</td><td rowspan="1">99</td></tr><tr class="passedodd"><td><a href="#m55">Test11GetAllCounts</a></td><td rowspan="1">1737459352284</td><td rowspan="1">32</td></tr><tr class="passedodd"><td><a href="#m56">Test12GetBidHistory</a></td><td rowspan="1">1737459352318</td><td rowspan="1">105</td></tr><tr class="passedodd"><td><a href="#m57">Test13GetBidDelete</a></td><td rowspan="1">1737459352424</td><td rowspan="1">32</td></tr><tr class="passedeven"><td rowspan="3">admin.BidderSupplierSummaryController</td><td><a href="#m58">test01GetSupplierSummary</a></td><td rowspan="1">1737459342888</td><td rowspan="1">45</td></tr><tr class="passedeven"><td><a href="#m59">test02GetDetailedSupplierSummary</a></td><td rowspan="1">1737459342934</td><td rowspan="1">45</td></tr><tr class="passedeven"><td><a href="#m60">test04GetBiddersSummary</a></td><td rowspan="1">1737459343028</td><td rowspan="1">1925</td></tr><tr class="passedodd"><td rowspan="4">admin.BrandController</td><td><a href="#m61">test01PutBrand</a></td><td rowspan="1">1737459352458</td><td rowspan="1">56</td></tr><tr class="passedodd"><td><a href="#m62">test02GetBrand</a></td><td rowspan="1">1737459352515</td><td rowspan="1">80</td></tr><tr class="passedodd"><td><a href="#m63">test03PostBrand</a></td><td rowspan="1">1737459352596</td><td rowspan="1">34</td></tr><tr class="passedodd"><td><a href="#m64">test05GetBrands</a></td><td rowspan="1">1737459352647</td><td rowspan="1">43</td></tr><tr class="passedeven"><td rowspan="4">admin.ClarityController</td><td><a href="#m65">test01PutClarityId</a></td><td rowspan="1">1737459352693</td><td rowspan="1">45</td></tr><tr class="passedeven"><td><a href="#m66">test02PostClarity</a></td><td rowspan="1">1737459352741</td><td rowspan="1">35</td></tr><tr class="passedeven"><td><a href="#m67">test03PostClarityExcel</a></td><td rowspan="1">1737459352777</td><td rowspan="1">63</td></tr><tr class="passedeven"><td><a href="#m68">test04GetClarities</a></td><td rowspan="1">1737459352841</td><td rowspan="1">104</td></tr><tr class="passedodd"><td rowspan="4">admin.ColorController</td><td><a href="#m69">Test01PutColorId</a></td><td rowspan="1">1737459352946</td><td rowspan="1">36</td></tr><tr class="passedodd"><td><a href="#m70">Test02PostColor</a></td><td rowspan="1">1737459352984</td><td rowspan="1">31</td></tr><tr class="passedodd"><td><a href="#m71">Test03PostColorExcel</a></td><td rowspan="1">1737459353017</td><td rowspan="1">71</td></tr><tr class="passedodd"><td><a href="#m72">Test04GetColors</a></td><td rowspan="1">1737459353089</td><td rowspan="1">225</td></tr><tr class="passedeven"><td rowspan="2">admin.CompanyController</td><td><a href="#m73">test01PutCompnayId</a></td><td rowspan="1">1737459344955</td><td rowspan="1">50</td></tr><tr class="passedeven"><td><a href="#m74">tset02GetCompnay</a></td><td rowspan="1">1737459345086</td><td rowspan="1">84</td></tr><tr class="passedodd"><td rowspan="4">admin.CountryController</td><td><a href="#m75">test01GetCountryId</a></td><td rowspan="1">1737459345171</td><td rowspan="1">30</td></tr><tr class="passedodd"><td><a href="#m76">test02PutCountryId</a></td><td rowspan="1">1737459345202</td><td rowspan="1">33</td></tr><tr class="passedodd"><td><a href="#m77">test03PostCountry</a></td><td rowspan="1">1737459345236</td><td rowspan="1">41</td></tr><tr class="passedodd"><td><a href="#m78">test04GetCountries</a></td><td rowspan="1">1737459345277</td><td rowspan="1">40</td></tr><tr class="passedeven"><td rowspan="3">admin.CutController</td><td><a href="#m79">test01PutCutId</a></td><td rowspan="1">1737459345318</td><td rowspan="1">68</td></tr><tr class="passedeven"><td><a href="#m80">test03PostCutExcel</a></td><td rowspan="1">1737459345421</td><td rowspan="1">960</td></tr><tr class="passedeven"><td><a href="#m81">test04GetCuts</a></td><td rowspan="1">1737459346383</td><td rowspan="1">157</td></tr><tr class="passedodd"><td rowspan="2">admin.DatabaseBackupController</td><td><a href="#m82">test01PostStart</a></td><td rowspan="1">1737459346541</td><td rowspan="1">34</td></tr><tr class="passedodd"><td><a href="#m83">test03GetBackupurl</a></td><td rowspan="1">1737459346610</td><td rowspan="1">663</td></tr><tr class="passedeven"><td rowspan="1">admin.FilterController</td><td><a href="#m84">test01GetFilter</a></td><td rowspan="1">1737459347275</td><td rowspan="1">798</td></tr><tr class="passedodd"><td rowspan="3">admin.FluoresceneController</td><td><a href="#m85">test01PutFluoresceneID</a></td><td rowspan="1">1737459348074</td><td rowspan="1">41</td></tr><tr class="passedodd"><td><a href="#m86">test04GetFluorescenes</a></td><td rowspan="1">1737459348148</td><td rowspan="1">119</td></tr><tr class="passedodd"><td><a href="#m87">tset03PostFluoresceneExcel</a></td><td rowspan="1">1737459348268</td><td rowspan="1">111</td></tr><tr class="passedeven"><td rowspan="2">admin.ImageController</td><td><a href="#m88">Test01GetTopbarLogo</a></td><td rowspan="1">1737459353317</td><td rowspan="1">681</td></tr><tr class="passedeven"><td><a href="#m89">Test04GetBulkBidThumbnailLogo</a></td><td rowspan="1">1737459355251</td><td rowspan="1">266</td></tr><tr class="passedodd"><td rowspan="5">admin.InvoiceDetailsController</td><td><a href="#m90">test01UserIdAuctionId</a></td><td rowspan="1">1737459348529</td><td rowspan="1">40</td></tr><tr class="passedodd"><td><a href="#m91">test02InvoiceDetails</a></td><td rowspan="1">1737459348569</td><td rowspan="1">36</td></tr><tr class="passedodd"><td><a href="#m92">test03InvoiceDetailsAllAuctionId</a></td><td rowspan="1">1737459348606</td><td rowspan="1">261</td></tr><tr class="passedodd"><td><a href="#m93">test04InvoiceDetailUserIdAuctionId</a></td><td rowspan="1">1737459348868</td><td rowspan="1">36</td></tr><tr class="passedodd"><td><a href="#m94">test05invoideDetailsAll</a></td><td rowspan="1">1737459348905</td><td rowspan="1">36</td></tr><tr class="passedeven"><td rowspan="3">admin.InvoiceListController</td><td><a href="#m95">test01GetPastInvoiceList</a></td><td rowspan="1">1737459348943</td><td rowspan="1">32</td></tr><tr class="passedeven"><td><a href="#m96">test02GetInvoiceList</a></td><td rowspan="1">1737459348977</td><td rowspan="1">38</td></tr><tr class="passedeven"><td><a href="#m97">test03GetHoldInvoiceList</a></td><td rowspan="1">1737459349017</td><td rowspan="1">79</td></tr><tr class="passedodd"><td rowspan="2">admin.LabController</td><td><a href="#m98">Test01LabLabId</a></td><td rowspan="1">1737459355518</td><td rowspan="1">36</td></tr><tr class="passedodd"><td><a href="#m99">Test04Labs</a></td><td rowspan="1">1737459355594</td><td rowspan="1">78</td></tr><tr class="passedeven"><td rowspan="2">admin.LedgerController</td><td><a href="#m100">test01LedgerLedgerId</a></td><td rowspan="1">1737459349098</td><td rowspan="1">32</td></tr><tr class="passedeven"><td><a href="#m101">test03Ledgers</a></td><td rowspan="1">1737459349162</td><td rowspan="1">34</td></tr><tr class="passedodd"><td rowspan="1">admin.LotController</td><td><a href="#m102">test01LotidAmount</a></td><td rowspan="1">1737459355673</td><td rowspan="1">44</td></tr><tr class="passedeven"><td rowspan="7">admin.LotDiamondBidController</td><td><a href="#m103">test01LotDiamondNegotiation</a></td><td rowspan="1">1737459349197</td><td rowspan="1">38</td></tr><tr class="passedeven"><td><a href="#m104">test02LotDiamondSearch</a></td><td rowspan="1">1737459349236</td><td rowspan="1">95</td></tr><tr class="passedeven"><td><a href="#m105">test03LotDiamondSearchPage</a></td><td rowspan="1">1737459349337</td><td rowspan="1">89</td></tr><tr class="passedeven"><td><a href="#m106">test05LotDiamondLotId</a></td><td rowspan="1">1737459349443</td><td rowspan="1">59</td></tr><tr class="passedeven"><td><a href="#m107">test06LotDiamondLiveBids</a></td><td rowspan="1">1737459349503</td><td rowspan="1">26</td></tr><tr class="passedeven"><td><a href="#m108">test09LotDiamondGetMyStockData</a></td><td rowspan="1">1737459349593</td><td rowspan="1">117</td></tr><tr class="passedeven"><td><a href="#m109">test10GetMyBidStatusData</a></td><td rowspan="1">1737459349710</td><td rowspan="1">63</td></tr><tr class="passedodd"><td rowspan="6">admin.LotDiamondController</td><td><a href="#m110">Test01LotActiveAll</a></td><td rowspan="1">1737459355837</td><td rowspan="1">48</td></tr><tr class="passedodd"><td><a href="#m111">Test03LotDiamondAuctionId</a></td><td rowspan="1">1737459355886</td><td rowspan="1">40</td></tr><tr class="passedodd"><td><a href="#m112">Test05LotDiamonds</a></td><td rowspan="1">1737459355927</td><td rowspan="1">38</td></tr><tr class="passedodd"><td><a href="#m113">Test07LotDiamondsAuctionId</a></td><td rowspan="1">1737459355966</td><td rowspan="1">36</td></tr><tr class="passedodd"><td><a href="#m114">Test08LotDIamondssupplierLots</a></td><td rowspan="1">1737459356003</td><td rowspan="1">131</td></tr><tr class="passedodd"><td><a href="#m115">Test09otDiamondsPrevious</a></td><td rowspan="1">1737459356135</td><td rowspan="1">39</td></tr><tr class="passedeven"><td rowspan="3">admin.MailInvoiceLotDiamondController</td><td><a href="#m116">Test01PostSendmails</a></td><td rowspan="1">1737459356176</td><td rowspan="1">30</td></tr><tr class="passedeven"><td><a href="#m117">Test02PostSendmailEmailIdAuctionID</a></td><td rowspan="1">1737459356207</td><td rowspan="1">40</td></tr><tr class="passedeven"><td><a href="#m118">Test03PostSendMailsAllLots</a></td><td rowspan="1">1737459356248</td><td rowspan="1">349</td></tr><tr class="passedodd"><td rowspan="4">admin.PolishController</td><td><a href="#m119">test01PolishPolishId</a></td><td rowspan="1">1737459350001</td><td rowspan="1">41</td></tr><tr class="passedodd"><td><a href="#m120">test02Polish</a></td><td rowspan="1">1737459350043</td><td rowspan="1">52</td></tr><tr class="passedodd"><td><a href="#m121">test03PolishExcel</a></td><td rowspan="1">1737459350098</td><td rowspan="1">102</td></tr><tr class="passedodd"><td><a href="#m122">test04Polishes</a></td><td rowspan="1">1737459350201</td><td rowspan="1">125</td></tr><tr class="passedeven"><td rowspan="1">admin.RemarkController</td><td><a href="#m123">Test01Postremark</a></td><td rowspan="1">1737459364923</td><td rowspan="1">39</td></tr><tr class="passedodd"><td rowspan="1">admin.ReservationController</td><td><a href="#m124">Test02GetSlots</a></td><td rowspan="1">1737459364993</td><td rowspan="1">45</td></tr><tr class="passedeven"><td rowspan="2">admin.ReservationTransactionController</td><td><a href="#m125">test03GetReservationAuctionIdUserId</a></td><td rowspan="1">1737459350459</td><td rowspan="1">49</td></tr><tr class="passedeven"><td><a href="#m126">test04GetReservationAll</a></td><td rowspan="1">1737459350509</td><td rowspan="1">38</td></tr><tr class="passedodd"><td rowspan="4">admin.ShapeController</td><td><a href="#m127">testcreateSymmetry01</a></td><td rowspan="1">1737459365039</td><td rowspan="1">33</td></tr><tr class="passedodd"><td><a href="#m128">testcreateSymmetry02</a></td><td rowspan="1">1737459365073</td><td rowspan="1">33</td></tr><tr class="passedodd"><td><a href="#m129">testcreateSymmetry03</a></td><td rowspan="1">1737459365106</td><td rowspan="1">82</td></tr><tr class="passedodd"><td><a href="#m130">testcreateSymmetry04</a></td><td rowspan="1">1737459365188</td><td rowspan="1">167</td></tr><tr class="passedeven"><td rowspan="4">admin.SymmetryController</td><td><a href="#m131">test01SymmetryId</a></td><td rowspan="1">1737459350548</td><td rowspan="1">59</td></tr><tr class="passedeven"><td><a href="#m132">test02Symmetry</a></td><td rowspan="1">1737459350609</td><td rowspan="1">45</td></tr><tr class="passedeven"><td><a href="#m133">test03SymmetryExcel</a></td><td rowspan="1">1737459350655</td><td rowspan="1">146</td></tr><tr class="passedeven"><td><a href="#m134">test04Symmetries</a></td><td rowspan="1">1737459350802</td><td rowspan="1">152</td></tr><tr class="passedodd"><td rowspan="4">admin.UserController</td><td><a href="#m135">test01GetUserDetails</a></td><td rowspan="1">1737459340651</td><td rowspan="1">246</td></tr><tr class="passedodd"><td><a href="#m136">test08GetSupplierDetailsByAuctionId</a></td><td rowspan="1">1737459340983</td><td rowspan="1">389</td></tr><tr class="passedodd"><td><a href="#m137">test09GetAppliedUsersKyc</a></td><td rowspan="1">1737459341374</td><td rowspan="1">47</td></tr><tr class="passedodd"><td><a href="#m138">test10GetInactiveUsers</a></td><td rowspan="1">1737459341422</td><td rowspan="1">172</td></tr><tr class="passedeven"><td rowspan="3">admin.UserControllerMerged</td><td><a href="#m139">Test01GetUserSummary</a></td><td rowspan="1">1737459365356</td><td rowspan="1">1939</td></tr><tr class="passedeven"><td><a href="#m140">Test02GetUserRole</a></td><td rowspan="1">1737459367296</td><td rowspan="1">33</td></tr><tr class="passedeven"><td><a href="#m141">Test03GetUserAccountSummary</a></td><td rowspan="1">1737459367329</td><td rowspan="1">1548</td></tr><tr class="passedodd"><td rowspan="2">admin.rapaportController</td><td><a href="#m142">Test01LotDiamondrapPrice</a></td><td rowspan="1">1737459356598</td><td rowspan="1">31</td></tr><tr class="passedodd"><td><a href="#m143">Test02rapaports</a></td><td rowspan="1">1737459356630</td><td rowspan="1">8259</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">admin.ImageController#Test02GetImages</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK, but got: 404 expected [200] but found [404]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
-	at org.testng.Assert.assertEquals(Assert.java:122)
-	at org.testng.Assert.assertEquals(Assert.java:907)
-	at admin.ImageController.Test02GetImages(ImageController.java:116)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+<h2>admin</h2><h3 id="m0">admin.BidController#Test01PutBidUpdate</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 2, was 0. Undefined path parameters are: proxyBidId, proxyBidAmount.
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.RequestSpecificationImpl.assertCorrectNumberOfPathParams(RequestSpecificationImpl.groovy:1277)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1161)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy:180)
+	at io.restassured.internal.RequestSpecificationImpl.put(RequestSpecificationImpl.groovy)
+	at admin.BidController.Test01PutBidUpdate(BidController.java:48)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+... Removed 42 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">admin.BidController#Test06GetBidCount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Request failed due to token expiration.
+	at admin.BidController.Test06GetBidCount(BidController.java:276)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">admin.BidController#Test08GetMyBid</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Request failed due to token expiration.
+	at admin.BidController.Test08GetMyBid(BidController.java:334)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">admin.BidController#Test09GetLoseCount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Request failed due to token expiration.
+	at admin.BidController.Test09GetLoseCount(BidController.java:392)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m4">admin.BidderSupplierSummaryController#test03GetDetailedBidderSummary</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Request failed due to token expiration.
+	at admin.BidderSupplierSummaryController.test03GetDetailedBidderSummary(BidderSupplierSummaryController.java:169)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m5">admin.BrandController#test04PostBrandExcel</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.io.FileNotFoundException: C:\Users\ESAMYAK121\Desktop\Testing\.xlsx (The system cannot find the file specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:159)
+	at org.apache.http.entity.mime.content.FileBody.writeTo(FileBody.java:116)
+	at org.apache.http.entity.mime.AbstractMultipartForm.doWriteTo(AbstractMultipartForm.java:134)
+	at org.apache.http.entity.mime.AbstractMultipartForm.writeTo(AbstractMultipartForm.java:157)
+	at org.apache.http.entity.mime.MultipartFormEntity.writeTo(MultipartFormEntity.java:113)
+	at org.apache.http.HttpEntity$writeTo$4.call(Unknown Source)
+	at io.restassured.internal.multipart.RestAssuredMultiPartEntity.writeTo(RestAssuredMultiPartEntity.groovy:110)
+	at org.apache.http.entity.HttpEntityWrapper.writeTo(HttpEntityWrapper.java:96)
+	at org.apache.http.impl.client.EntityEnclosingRequestWrapper$EntityWrapper.writeTo(EntityEnclosingRequestWrapper.java:110)
+	at org.apache.http.impl.entity.EntitySerializer.serialize(EntitySerializer.java:118)
+	at org.apache.http.impl.AbstractHttpClientConnection.sendRequestEntity(AbstractHttpClientConnection.java:274)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.sendRequestEntity(ManagedClientConnectionImpl.java:214)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:238)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)
+	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1209)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at admin.BrandController.test04PostBrandExcel(BrandController.java:216)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m6">admin.CompanyController#test03PostCompany</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK or 201 Created, but got: 500 expected [true] but found [false]
+	at admin.CompanyController.test03PostCompany(CompanyController.java:173)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m7">admin.CutController#test02PostCut</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK or 201 Created, but got: 409 expected [true] but found [false]
+	at admin.CutController.test02PostCut(CutController.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m8">admin.DatabaseBackupController#test02GetStatus</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK, but got: 500 expected [200] but found [500]
+	at admin.DatabaseBackupController.test02GetStatus(DatabaseBackupController.java:115)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m9">admin.FluoresceneController#test02PostFluorescene</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK or 201 Created, but got: 409 expected [true] but found [false]
+	at admin.FluoresceneController.test02PostFluorescene(FluoresceneController.java:131)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m10">admin.ForgotPasswordController#test01AuthResetPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK or 201 Created, but got: 400 expected [true] but found [false]
+	at admin.ForgotPasswordController.test01AuthResetPassword(ForgotPasswordController.java:69)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m11">admin.ForgotPasswordController#test02AuthForgotPassword</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK or 201 Created, but got: 400 expected [true] but found [false]
+	at admin.ForgotPasswordController.test02AuthForgotPassword(ForgotPasswordController.java:121)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m12">admin.GSBController#loginToSystem</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Request failed due to token expiration.
+	at admin.GSBController.loginToSystem(GSBController.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m13">admin.ImageController#Test02GetImages</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK, but got: 404 expected [200] but found [404]
+	at admin.ImageController.Test02GetImages(ImageController.java:116)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m14">admin.ImageController#Test03GetFetchImages</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK, but got: 404 expected [200] but found [404]
+	at admin.ImageController.Test03GetFetchImages(ImageController.java:169)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m15">admin.LabController#Test02Lab</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK or 201 Created, but got: 409 expected [true] but found [false]
+	at admin.LabController.Test02Lab(LabController.java:133)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m16">admin.LabController#Test03LabExcel</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.io.FileNotFoundException: C:\WorkSpaces\Swastik2425_Workspace\Postsample (The system cannot find the path specified)
+	at java.base/java.io.FileInputStream.open0(Native Method)
+	at java.base/java.io.FileInputStream.open(FileInputStream.java:219)
+	at java.base/java.io.FileInputStream.&lt;init&gt;(FileInputStream.java:159)
+	at org.apache.http.entity.mime.content.FileBody.writeTo(FileBody.java:116)
+	at org.apache.http.entity.mime.AbstractMultipartForm.doWriteTo(AbstractMultipartForm.java:134)
+	at org.apache.http.entity.mime.AbstractMultipartForm.writeTo(AbstractMultipartForm.java:157)
+	at org.apache.http.entity.mime.MultipartFormEntity.writeTo(MultipartFormEntity.java:113)
+	at org.apache.http.HttpEntity$writeTo$4.call(Unknown Source)
+	at io.restassured.internal.multipart.RestAssuredMultiPartEntity.writeTo(RestAssuredMultiPartEntity.groovy:110)
+	at org.apache.http.entity.HttpEntityWrapper.writeTo(HttpEntityWrapper.java:96)
+	at org.apache.http.impl.client.EntityEnclosingRequestWrapper$EntityWrapper.writeTo(EntityEnclosingRequestWrapper.java:110)
+	at org.apache.http.impl.entity.EntitySerializer.serialize(EntitySerializer.java:118)
+	at org.apache.http.impl.AbstractHttpClientConnection.sendRequestEntity(AbstractHttpClientConnection.java:274)
+	at org.apache.http.impl.conn.ManagedClientConnectionImpl.sendRequestEntity(ManagedClientConnectionImpl.java:214)
+	at org.apache.http.protocol.HttpRequestExecutor.doSendRequest(HttpRequestExecutor.java:238)
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:123)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at io.restassured.internal.RestAssuredHttpBuilder.doRequest(RestAssuredHttpBuilder.java:141)
+	at io.restassured.internal.http.HTTPBuilder.post(HTTPBuilder.java:349)
+	at io.restassured.internal.http.HTTPBuilder$post$2.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1209)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy:176)
+	at io.restassured.internal.RequestSpecificationImpl.post(RequestSpecificationImpl.groovy)
+	at admin.LabController.Test03LabExcel(LabController.java:159)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m17">admin.LedgerController#test02Ledger</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK or 201 Created, but got: 409 expected [true] but found [false]
+	at admin.LedgerController.test02Ledger(LedgerController.java:136)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m18">admin.LotController#test06DownloadLotExcel</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Request failed due to token expiration.
+	at admin.LotController.test06DownloadLotExcel(LotController.java:99)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m19">admin.LotController#test07BiddersPdf</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Internal Server Error occurred.
+	at admin.LotController.test07BiddersPdf(LotController.java:160)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m20">admin.LotDiamondBidController#test04LotDiamondRemark</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalArgumentException: Invalid number of path parameters. Expected 0, was 1. Redundant path parameters are: auctionId=3fa85f64-5717-4562-b3fc-2c963f66afa6.
+	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:86)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:263)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:277)
+	at io.restassured.internal.RequestSpecificationImpl.assertCorrectNumberOfPathParams(RequestSpecificationImpl.groovy:1277)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:176)
+	at io.restassured.internal.RequestSpecificationImpl.sendRequest(RequestSpecificationImpl.groovy:1161)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$sendRequest(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:166)
+	at io.restassured.internal.filter.SendRequestFilter.filter(SendRequestFilter.groovy:30)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.time.TimingFilter.filter(TimingFilter.java:56)
+	at io.restassured.filter.Filter$filter$0.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.filter.CsrfFilter.filter(CsrfFilter.groovy:70)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:45)
+	at io.restassured.filter.Filter$filter.call(Unknown Source)
+	at io.restassured.internal.filter.FilterContextImpl.next(FilterContextImpl.groovy:72)
+	at io.restassured.filter.FilterContext$next.call(Unknown Source)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1704)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy:1710)
+	at io.restassured.internal.RequestSpecificationImpl.this$2$applyPathParamsAndSendRequest(RequestSpecificationImpl.groovy)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:328)
+	at groovy.lang.MetaClassImpl.doInvokeMethod(MetaClassImpl.java:1333)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1088)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1007)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:790)
+	at io.restassured.internal.RequestSpecificationImpl.invokeMethod(RequestSpecificationImpl.groovy)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.call(PogoInterceptableSite.java:46)
+	at org.codehaus.groovy.runtime.callsite.PogoInterceptableSite.callCurrent(PogoInterceptableSite.java:57)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:203)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy:172)
+	at io.restassured.internal.RequestSpecificationImpl.get(RequestSpecificationImpl.groovy)
+	at admin.LotDiamondBidController.test04LotDiamondRemark(LotDiamondBidController.java:286)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 42 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m21">admin.LotDiamondBidController#test07LotDiamondFavourites</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK, but got: 500 expected [true] but found [false]
+	at admin.LotDiamondBidController.test07LotDiamondFavourites(LotDiamondBidController.java:464)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m22">admin.LotDiamondBidController#test08LotDiamondGetWinBids</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK, but got: 500 expected [true] but found [false]
+	at admin.LotDiamondBidController.test08LotDiamondGetWinBids(LotDiamondBidController.java:508)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m23">admin.LotDiamondBidController#test11GetMyBids</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK, but got: 500 expected [true] but found [false]
+	at admin.LotDiamondBidController.test11GetMyBids(LotDiamondBidController.java:662)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m24">admin.LotDiamondBidController#test12GetLoseBids</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK, but got: 500 expected [true] but found [false]
+	at admin.LotDiamondBidController.test12GetLoseBids(LotDiamondBidController.java:708)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m25">admin.LotDiamondExcelController#loginToSystem</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK, but got: 500 expected [200] but found [500]
+	at admin.LotDiamondExcelController.loginToSystem(LotDiamondExcelController.java:74)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 30 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m26">admin.RefreshTokencontroller#Test01GetAuthRefreshToken</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK or 201 Created, but got: 409 expected [true] but found [false]
+	at admin.RefreshTokencontroller.Test01GetAuthRefreshToken(RefreshTokencontroller.java:53)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m27">admin.RemarkController#Test03RemarkCount</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK or 204 No Content, but got: 500 expected [true] but found [false]
+	at admin.RemarkController.Test03RemarkCount(RemarkController.java:174)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m28">admin.ReservationController#Test01PostSlotTransaction</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.Error: Unresolved compilation problems: 
+	Type mismatch: cannot convert from String[] to String
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error on tokens, delete these tokens
+	Syntax error on token &quot;:&quot;, , expected
+	The type of the expression must be an array type but it resolved to String
+	Syntax error on tokens, delete these tokens
+	Type mismatch: cannot convert from String to int
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error on token &quot;:&quot;, , expected
+	Syntax error, insert &quot;;&quot; to complete LocalVariableDeclarationStatement
+
+	at admin.ReservationController.Test01PostSlotTransaction(ReservationController.java:32)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 25 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m29">admin.ReservationTransactionController#test01PostCreateReservation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Expected 200 OK or 201 Created, but got: 500 expected [true] but found [false]
+	at admin.ReservationTransactionController.test01PostCreateReservation(ReservationTransactionController.java:80)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m30">admin.UserController#test07GetKycByUserId</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: Request failed due to token expiration.
+	at admin.UserController.test07GetKycByUserId(UserController.java:197)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1597)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m31">admin.AuctionController#test01PutAuctionId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m32">admin.AuctionController#test02DeleteAuctionId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m33">admin.AuctionController#test03PostAuction</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m34">admin.AuctionController#test04PostAuctionSupplierUpdateEmails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m35">admin.AuctionController#test05PostAuctionSentEmails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m36">admin.AuctionController#test06GetAuctions</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m37">admin.AuctionController#test07GetAuctionView</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m38">admin.AuctionController#test08GetAuctionsUpcoming</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m39">admin.AuctionController#test09GetAuctionsUpcomingJewellery</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m40">admin.AuctionController#test10GetAuctionsUpcomingDiamond</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m41">admin.AuctionController#test11GetAuctionsJewellery</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m42">admin.AuctionController#test12GetAuctionsInactive</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m43">admin.AuctionController#test13GetAuctionsFinishedJewellery</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m44">admin.AuctionController#test14GetSAuctionFinishedDiamond</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m45">admin.AuctionController#test15GetAuctionsFinishedAndEndDiamond</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m46">admin.AuctionController#test16GetAuctionsEvents</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m47">admin.AuctionController#test17GetAuctionsDiamond</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m48">admin.AuctionController#test18GetAuctionByActive</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m49">admin.AuthenticationController#test01AuthRegister</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m50">admin.AuthenticationController#test02AuthRegisterAll</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m51">admin.BalanceSheetController#Test01BalanceSheet</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m52">admin.BidController#Test02PutBidUpdateJewellery</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m53">admin.BidController#Test03PostMakeWinners</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m54">admin.BidController#Test04GetBiddersInfo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m55">admin.BidController#Test11GetAllCounts</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m56">admin.BidController#Test12GetBidHistory</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m57">admin.BidController#Test13GetBidDelete</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m58">admin.BidderSupplierSummaryController#test01GetSupplierSummary</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m59">admin.BidderSupplierSummaryController#test02GetDetailedSupplierSummary</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m60">admin.BidderSupplierSummaryController#test04GetBiddersSummary</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m61">admin.BrandController#test01PutBrand</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m62">admin.BrandController#test02GetBrand</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m63">admin.BrandController#test03PostBrand</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m64">admin.BrandController#test05GetBrands</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m65">admin.ClarityController#test01PutClarityId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m66">admin.ClarityController#test02PostClarity</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m67">admin.ClarityController#test03PostClarityExcel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m68">admin.ClarityController#test04GetClarities</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m69">admin.ColorController#Test01PutColorId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m70">admin.ColorController#Test02PostColor</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m71">admin.ColorController#Test03PostColorExcel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m72">admin.ColorController#Test04GetColors</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m73">admin.CompanyController#test01PutCompnayId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m74">admin.CompanyController#tset02GetCompnay</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m75">admin.CountryController#test01GetCountryId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m76">admin.CountryController#test02PutCountryId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m77">admin.CountryController#test03PostCountry</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m78">admin.CountryController#test04GetCountries</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m79">admin.CutController#test01PutCutId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m80">admin.CutController#test03PostCutExcel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m81">admin.CutController#test04GetCuts</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m82">admin.DatabaseBackupController#test01PostStart</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m83">admin.DatabaseBackupController#test03GetBackupurl</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m84">admin.FilterController#test01GetFilter</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m85">admin.FluoresceneController#test01PutFluoresceneID</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m86">admin.FluoresceneController#test04GetFluorescenes</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m87">admin.FluoresceneController#tset03PostFluoresceneExcel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m88">admin.ImageController#Test01GetTopbarLogo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m89">admin.ImageController#Test04GetBulkBidThumbnailLogo</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m90">admin.InvoiceDetailsController#test01UserIdAuctionId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m91">admin.InvoiceDetailsController#test02InvoiceDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m92">admin.InvoiceDetailsController#test03InvoiceDetailsAllAuctionId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m93">admin.InvoiceDetailsController#test04InvoiceDetailUserIdAuctionId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m94">admin.InvoiceDetailsController#test05invoideDetailsAll</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m95">admin.InvoiceListController#test01GetPastInvoiceList</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m96">admin.InvoiceListController#test02GetInvoiceList</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m97">admin.InvoiceListController#test03GetHoldInvoiceList</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m98">admin.LabController#Test01LabLabId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m99">admin.LabController#Test04Labs</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m100">admin.LedgerController#test01LedgerLedgerId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m101">admin.LedgerController#test03Ledgers</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m102">admin.LotController#test01LotidAmount</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m103">admin.LotDiamondBidController#test01LotDiamondNegotiation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m104">admin.LotDiamondBidController#test02LotDiamondSearch</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m105">admin.LotDiamondBidController#test03LotDiamondSearchPage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m106">admin.LotDiamondBidController#test05LotDiamondLotId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m107">admin.LotDiamondBidController#test06LotDiamondLiveBids</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m108">admin.LotDiamondBidController#test09LotDiamondGetMyStockData</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m109">admin.LotDiamondBidController#test10GetMyBidStatusData</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m110">admin.LotDiamondController#Test01LotActiveAll</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m111">admin.LotDiamondController#Test03LotDiamondAuctionId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m112">admin.LotDiamondController#Test05LotDiamonds</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m113">admin.LotDiamondController#Test07LotDiamondsAuctionId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m114">admin.LotDiamondController#Test08LotDIamondssupplierLots</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m115">admin.LotDiamondController#Test09otDiamondsPrevious</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m116">admin.MailInvoiceLotDiamondController#Test01PostSendmails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m117">admin.MailInvoiceLotDiamondController#Test02PostSendmailEmailIdAuctionID</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m118">admin.MailInvoiceLotDiamondController#Test03PostSendMailsAllLots</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m119">admin.PolishController#test01PolishPolishId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m120">admin.PolishController#test02Polish</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m121">admin.PolishController#test03PolishExcel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m122">admin.PolishController#test04Polishes</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m123">admin.RemarkController#Test01Postremark</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m124">admin.ReservationController#Test02GetSlots</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m125">admin.ReservationTransactionController#test03GetReservationAuctionIdUserId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m126">admin.ReservationTransactionController#test04GetReservationAll</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m127">admin.ShapeController#testcreateSymmetry01</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m128">admin.ShapeController#testcreateSymmetry02</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m129">admin.ShapeController#testcreateSymmetry03</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m130">admin.ShapeController#testcreateSymmetry04</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m131">admin.SymmetryController#test01SymmetryId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m132">admin.SymmetryController#test02Symmetry</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m133">admin.SymmetryController#test03SymmetryExcel</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m134">admin.SymmetryController#test04Symmetries</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m135">admin.UserController#test01GetUserDetails</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m136">admin.UserController#test08GetSupplierDetailsByAuctionId</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m137">admin.UserController#test09GetAppliedUsersKyc</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m138">admin.UserController#test10GetInactiveUsers</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m139">admin.UserControllerMerged#Test01GetUserSummary</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m140">admin.UserControllerMerged#Test02GetUserRole</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m141">admin.UserControllerMerged#Test03GetUserAccountSummary</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m142">admin.rapaportController#Test01LotDiamondrapPrice</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m143">admin.rapaportController#Test02rapaports</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

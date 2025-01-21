@@ -31,20 +31,11 @@
           <include name="test02GetStatus"/>
         </methods>
       </class> <!-- admin.DatabaseBackupController -->
-      <class name="admin.UserControllerMerged">
-        <methods>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="Test02GetUserRole"/>
-        </methods>
-      </class> <!-- admin.UserControllerMerged -->
       <class name="admin.UserController">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="test06GetUserSupplierDetails"/>
           <include name="test07GetKycByUserId"/>
-          <include name="test05UpdateUploadedUsers"/>
         </methods>
       </class> <!-- admin.UserController -->
       <class name="admin.CompanyController">
@@ -98,7 +89,6 @@
           <include name="Test01PutBidUpdate"/>
           <include name="Test06GetBidCount"/>
           <include name="Test09GetLoseCount"/>
-          <include name="Test12GetBidHistory"/>
         </methods>
       </class> <!-- admin.BidController -->
       <class name="admin.LotDiamondBidController">
@@ -130,7 +120,6 @@
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="Test02GetSlots"/>
           <include name="Test01PostSlotTransaction"/>
         </methods>
       </class> <!-- admin.ReservationController -->

@@ -109,62 +109,62 @@ public class LotController extends BaseTest {
 
 	@Test
 	public void test07BiddersPdf() {
-		// Set the base URI
-		RestAssured.baseURI = "http://localhost:8080/api/v1";
-		RequestSpecification request = RestAssured.given();
+	    // Set the base URI
+	    RestAssured.baseURI = "http://localhost:8080/api/v1";
+	    RequestSpecification request = RestAssured.given();
 
-		// Add query parameters
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+	    // Add query parameters
+	    request.queryParam("username", Constant.adminUserName);
+	    request.queryParam("password", Constant.adminPassword);
 
-		// Add Bearer token in Authorization header
-		String token = Constant.authToken;
-		request.header("Authorization", "Bearer " + token);
+	    // Add Bearer token in Authorization header
+	    String token = Constant.authToken;
+	    request.header("Authorization", "Bearer " + token);
 
-		// Add Content-Type header
-		request.header("Content-Type", "application/json");
+	    // Add Content-Type header
+	    request.header("Content-Type", "application/json");
 
-		// Add path parameter
-		String auctionId = "697d6da3-6bf3-4e82-b25a-0c98fc1c69fe";
-		request.pathParam("auctionId", auctionId);
+	    // Add path parameter
+	    String auctionId = "ACFFE150-2857-4A32-A25C-B262BBDB9DA3";
+	    request.pathParam("auctionId", auctionId);
 
-		// Log request details for debugging
-		request.log().all();
+	    // Log request details for debugging
+	    request.log().all();
 
-		// Send GET request
-		Response response = request.get("/bidders/pdf/{auctionId}");
+	    // Send GET request
+	    Response response = request.get("/bidders/pdf/{auctionId}");
 
-		// Log response details for debugging
-		response.then().log().all();
+	    // Log response details for debugging
+	    response.then().log().all();
 
-		// Print response details
-		System.out.println("The status received: " + response.statusLine());
-		System.out.println("Response: " + response.getBody().asString());
+	    // Print response details
+	    System.out.println("The status received: " + response.statusLine());
+	    System.out.println("Response: " + response.getBody().asString());
 
-		// Handle different status codes
-		int statusCode = response.getStatusCode();
-		switch (statusCode) {
-		case 200:
-			System.out.println("Request succeeded: Access granted.");
-			break;
-		case 401:
-			System.out.println("Token expired. Please generate a new token.");
-			Assert.fail("Request failed due to token expiration.");
-			break;
-		case 403:
-			System.out.println("Access denied: Invalid credentials or permissions.");
-			Assert.fail("Access denied.");
-			break;
-		case 500:
-			System.out.println("Internal Server Error: Please check server logs.");
-			Assert.fail("Internal Server Error occurred.");
-			break;
-		default:
-			System.out.println("Unexpected status code: " + statusCode);
-			Assert.fail("Unexpected response status: " + statusCode);
-		}
+	    // Handle different status codes
+	    int statusCode = response.getStatusCode();
+	    switch (statusCode) {
+	        case 200:
+	            System.out.println("Request succeeded: Access granted.");
+	            break;
+	        case 401:
+	            System.out.println("Token expired. Please generate a new token.");
+	            Assert.fail("Request failed due to token expiration.");
+	            break;
+	        case 403:
+	            System.out.println("Access denied: Invalid credentials or permissions.");
+	            Assert.fail("Access denied.");
+	            break;
+	        case 500:
+	            System.out.println("Internal Server Error: Please check server logs.");
+	            Assert.fail("Internal Server Error occurred.");
+	            break;
+	        default:
+	            System.out.println("Unexpected status code: " + statusCode);
+	            Assert.fail("Unexpected response status: " + statusCode);
+	    }
 
-		// Assert the status code (expected 200)
-		Assert.assertEquals(statusCode, 200, "Expected 200 OK, but got: " + statusCode);
+	    // Assert the status code (expected 200)
+	    Assert.assertEquals(statusCode, 200, "Expected 200 OK, but got: " + statusCode);
 	}
 }
