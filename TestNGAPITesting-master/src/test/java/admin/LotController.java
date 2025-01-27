@@ -1,5 +1,8 @@
 package admin;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
@@ -66,45 +69,58 @@ public class LotController extends BaseTest {
 
 	@Test
 	public void test06DownloadLotExcel() {
-		// Set the base URI
-		RestAssured.baseURI = "http://localhost:8080/api/v1";
-		RequestSpecification request = RestAssured.given();
+	    // Set the base URI
+	    RestAssured.baseURI = "http://localhost:8080/api/v1";
+	    RequestSpecification request = RestAssured.given();
 
-		// Add query parameters
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+	    // Add query parameters
+	    request.queryParam("username", Constant.adminUserName);
+	    request.queryParam("password", Constant.adminPassword);
 
-		// Add Bearer token in Authorization header
-		String token = Constant.authToken;
-		request.header("Authorization", "Bearer " + token);
+	    // Add Bearer token in Authorization header
+	    String token = Constant.authToken;
+	    request.header("Authorization", "Bearer " + token);
 
-		// Add Content-Type header
-		request.header("Content-Type", "application/json");
+	    // Add Content-Type header
+	    request.header("Content-Type", "application/json");
 
-		// Add path parameter
-		String auctionId = "ACFFE150-2857-4A32-A25C-B262BBDB9DA3";
-		request.pathParam("auctionId", auctionId);
+	    // Add path parameter
+	    String auctionId = "ACFFE150-2857-4A32-A25C-B262BBDB9DA3";
+	    request.pathParam("auctionId", auctionId);
 
-		// Send GET request
-		Response response = request.get("/download-lot-excel/{auctionId}");
+	    // Send GET request
+	    Response response = request.get("/download-lot-excel/{auctionId}");
 
-		// Handle response
-		System.out.println("The status received: " + response.statusLine());
-		System.out.println("Response: " + response.getBody().asString());
+	    // Handle response
+	    System.out.println("The status received: " + response.statusLine());
 
-		// Check status code
-		int statusCode = response.getStatusCode();
-		if (statusCode == 401) {
-			System.out.println("Token expired. Please generate a new token.");
-			Assert.fail("Request failed due to token expiration.");
-		} else if (statusCode == 403) {
-			System.out.println("Access denied: Invalid credentials or permissions.");
-		} else if (statusCode == 200) {
-			System.out.println("Request succeeded: Access granted.");
-		}
+	    // Check status code
+	    int statusCode = response.getStatusCode();
+	    if (statusCode == 401) {
+	        System.out.println("Token expired. Please generate a new token.");
+	        Assert.fail("Request failed due to token expiration.");
+	    } else if (statusCode == 403) {
+	        System.out.println("Access denied: Invalid credentials or permissions.");
+	    } else if (statusCode == 200) {
+	        System.out.println("Request succeeded: Access granted.");
+	        try {
+	            // Specify the file path where the Excel file should be saved
+	            String filePath = "C:\\Users\\ESAMYAK121\\Desktop\\Testing\\lot-details.xlsx";
 
-		// Assert the status code
-		Assert.assertEquals(statusCode, 200, "Expected 200 OK, but got: " + statusCode);
+	            // Write the response body to the file
+	            FileOutputStream fileOutputStream = new FileOutputStream(new String(filePath));
+	            fileOutputStream.write(response.getBody().asByteArray());
+	            fileOutputStream.close();
+
+	            System.out.println("Excel file downloaded successfully at: " + filePath);
+	        } catch (IOException e) {
+	            e.printStackTrace();
+	            Assert.fail("Failed to save the Excel file: " + e.getMessage());
+	        }
+	    }
+
+	    // Assert the status code
+	    Assert.assertEquals(statusCode, 200, "Expected 200 OK, but got: " + statusCode);
 	}
 
 	@Test

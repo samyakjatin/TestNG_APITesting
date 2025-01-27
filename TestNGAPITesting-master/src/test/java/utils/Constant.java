@@ -6,4 +6,6 @@ public class Constant {
 	public static String adminPassword = "samyak@2024";
 
 	public static String authToken = "";
+	public static String auctionName="";
+	public static String auctionId="";
 }

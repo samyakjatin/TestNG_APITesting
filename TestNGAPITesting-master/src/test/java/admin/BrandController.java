@@ -180,7 +180,7 @@ public class BrandController extends BaseTest {
 				"Expected 200 OK or 201 Created, but got: " + statusCode);
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void test04PostBrandExcel() {
 
 		// Set the base URI

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="admin.ImageController">
+      <class name="admin.AuctionController">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="Test02GetImages"/>
+          <include name="test01PutAuctionId"/>
         </methods>
-      </class> <!-- admin.ImageController -->
+      </class> <!-- admin.AuctionController -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

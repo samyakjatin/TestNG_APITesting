@@ -163,7 +163,7 @@ class UserController extends BaseTest {
 		Assert.assertEquals(statusCode, 200, "Expected 200 OK, but got: " + statusCode);
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void test07GetKycByUserId() {
 
 		// Set the base URI

@@ -1,0 +1,32 @@
+Response response = request.post("/auth/authenticate");
+System.out.println("The status received: " + response.statusLine());
+
+int statusCode = response.getStatusCode();
+String responseBody = response.getBody().asString();
+
+// Validate response body before processing
+if (responseBody == null || responseBody.isEmpty()) {
+    throw new RuntimeException("Response body is null or empty. Status Code: " + statusCode);
+}
+
+System.out.println("---------------Response---------------");
+System.out.println(responseBody);
+
+// Parse JSON safely
+JSONObject jsonObject;
+try {
+    jsonObject = new JSONObject(responseBody);
+} catch (Exception e) {
+    throw new RuntimeException("Failed to parse response body as JSON: " + e.getMessage(), e);
+}
+
+// Validate if the JSON contains the expected key
+if (!jsonObject.has("accessToken")) {
+    throw new RuntimeException("Response JSON does not contain 'accessToken'. Response: " + responseBody);
+}
+
+Constant.authToken = jsonObject.getString("accessToken");
+System.out.println("Before suite Token: " + Constant.authToken);
+
+// Assert the status code
+Assert.assertEquals(statusCode, 200, "Expected status code 200 but got " + statusCode);

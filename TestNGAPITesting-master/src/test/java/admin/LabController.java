@@ -1,6 +1,8 @@
 package admin;
 
 import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -92,13 +94,15 @@ public class LabController extends BaseTest {
 		    // Set the Content-Type header to application/json
 		    request.header("Content-Type", "application/json");  
 		    
+		    String uniqueName = "india" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+		    
 		    // Create the JSON body for the POST request
 		    String jsonBody = "{\n" +
 		                      "  \"desc\": \"string\",\n" +
 		                      "  \"code\": \"string\",\n" +
 		                      "  \"srNo\": 0,\n" +
 		                      "  \"labId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n" +
-		                      "  \"name\": \"string\",\n" +
+		                      "  \"name\": \""+uniqueName+"\",\n" +
 		                      "  \"count\": 0,\n" +
 		                      "  \"createdDate\": \"2024-12-10T07:05:13.393Z\"\n" +
 		                      "}";
@@ -150,7 +154,7 @@ public class LabController extends BaseTest {
 		    request.header("Content-Type", "multipart/form-data");  
 		    
 		    // Specify the file to upload (replace with your actual file path)
-		    File file = new File("C:\\WorkSpaces\\Swastik2425_Workspace\\Postsample");  // Update with actual file path
+		    File file = new File("C:\\Users\\ESAMYAK121\\Desktop\\Testing\\lab_Masters_Excel.xlsx");  // Update with actual file path
 		    
 		    // Add the file as part of the multipart request
 		    request.multiPart("file", file);

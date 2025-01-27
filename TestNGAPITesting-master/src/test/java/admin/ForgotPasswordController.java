@@ -1,5 +1,8 @@
 package admin;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
@@ -29,11 +32,13 @@ public void test01AuthResetPassword() {
         // Set the Content-Type header to application/json
         request.header("Content-Type", "application/json");  
         
+    
+        
         // Create the JSON body for the POST request
         String jsonBody = "{\n" +
                 "  \"otp\": \"string\",\n" +
                 "  \"newPassword\": \"string\",\n" +
-                "  \"email\": \"harshitmali2104@gmail.com\",\n" +
+                "  \"email\": \"aditi.patel@pmail.com\",\n" +
                 "  \"expiryTime\": \"2024-12-24T07:47:42.462Z\",\n" +
                 "  \"active\": true,\n" +
                 "  \"userId\": \"string\"\n" +
@@ -88,7 +93,7 @@ public void test02AuthForgotPassword() {
         
         // Create the JSON body for the POST request
         String jsonBody = "{\n" +
-                "  \"email\": \"harshitmali2104@gmail.com\"\n" +
+                "  \"email\": \"aditi.patel@pmail.com\"\n" +
                 "}";
 
         // Add the JSON body to the request

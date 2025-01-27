@@ -151,7 +151,7 @@ public class BidderSupplierSummaryController extends BaseTest {
 		// String countryId = "435a09ab-ad6e-11ef-8d40-c8d3ffbc6ac6";
 		// String supplierId = "88be816b-c3e9-432b-9111-45af8ba70bfb";
 		// String boxNo = "BOX1";
-		String bidderId = "";
+		String bidderId = "04d275a3-6707-445a-878f-3f869d2b05da";
 
 		// Add path parameters dynamically
 		// request.pathParam("userId", userId);

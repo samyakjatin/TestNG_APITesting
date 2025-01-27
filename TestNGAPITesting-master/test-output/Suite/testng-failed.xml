@@ -6,113 +6,177 @@
       <class name="admin.ReservationTransactionController">
         <methods>
           <include name="beforeSuite"/>
+          <include name="test03GetReservationAuctionIdUserId"/>
           <include name="afterSuite"/>
+          <include name="test04GetReservationAll"/>
           <include name="test01PostCreateReservation"/>
         </methods>
       </class> <!-- admin.ReservationTransactionController -->
+      <class name="admin.AuthenticationController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="test01AuthRegister"/>
+          <include name="test02AuthRegisterAll"/>
+        </methods>
+      </class> <!-- admin.AuthenticationController -->
       <class name="admin.BidderSupplierSummaryController">
         <methods>
+          <include name="test02GetDetailedSupplierSummary"/>
           <include name="beforeSuite"/>
           <include name="test03GetDetailedBidderSummary"/>
           <include name="afterSuite"/>
+          <include name="test01GetSupplierSummary"/>
+          <include name="test04GetBiddersSummary"/>
         </methods>
       </class> <!-- admin.BidderSupplierSummaryController -->
-      <class name="admin.LotDiamondExcelController">
+      <class name="admin.LotDiamondController">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="loginToSystem"/>
+          <include name="Test09otDiamondsPrevious"/>
+          <include name="Test07LotDiamondsAuctionId"/>
+          <include name="Test03LotDiamondAuctionId"/>
+          <include name="Test01LotActiveAll"/>
+          <include name="Test05LotDiamonds"/>
+          <include name="Test08LotDIamondssupplierLots"/>
         </methods>
-      </class> <!-- admin.LotDiamondExcelController -->
+      </class> <!-- admin.LotDiamondController -->
+      <class name="admin.InvoiceDetailsController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="test05invoideDetailsAll"/>
+          <include name="afterSuite"/>
+          <include name="test04InvoiceDetailUserIdAuctionId"/>
+          <include name="test03InvoiceDetailsAllAuctionId"/>
+          <include name="test02InvoiceDetails"/>
+          <include name="test01UserIdAuctionId"/>
+        </methods>
+      </class> <!-- admin.InvoiceDetailsController -->
       <class name="admin.DatabaseBackupController">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="test02GetStatus"/>
+          <include name="test03GetBackupurl"/>
+          <include name="test01PostStart"/>
         </methods>
       </class> <!-- admin.DatabaseBackupController -->
+      <class name="admin.UserControllerMerged">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="Test03GetUserAccountSummary"/>
+          <include name="Test02GetUserRole"/>
+          <include name="Test01GetUserSummary"/>
+        </methods>
+      </class> <!-- admin.UserControllerMerged -->
       <class name="admin.UserController">
         <methods>
           <include name="beforeSuite"/>
+          <include name="test10GetInactiveUsers"/>
           <include name="afterSuite"/>
-          <include name="test07GetKycByUserId"/>
+          <include name="test09GetAppliedUsersKyc"/>
+          <include name="test08GetSupplierDetailsByAuctionId"/>
+          <include name="test01GetUserDetails"/>
         </methods>
       </class> <!-- admin.UserController -->
+      <class name="admin.SymmetryController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="test01SymmetryId"/>
+          <include name="afterSuite"/>
+          <include name="test04Symmetries"/>
+          <include name="test03SymmetryExcel"/>
+          <include name="test02Symmetry"/>
+        </methods>
+      </class> <!-- admin.SymmetryController -->
       <class name="admin.CompanyController">
         <methods>
           <include name="beforeSuite"/>
+          <include name="tset02GetCompnay"/>
           <include name="afterSuite"/>
+          <include name="test01PutCompnayId"/>
           <include name="test03PostCompany"/>
         </methods>
       </class> <!-- admin.CompanyController -->
-      <class name="admin.RefreshTokencontroller">
-        <methods>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="Test01GetAuthRefreshToken"/>
-        </methods>
-      </class> <!-- admin.RefreshTokencontroller -->
       <class name="admin.LedgerController">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="test02Ledger"/>
+          <include name="test01LedgerLedgerId"/>
+          <include name="test03Ledgers"/>
         </methods>
       </class> <!-- admin.LedgerController -->
+      <class name="admin.ColorController">
+        <methods>
+          <include name="Test03PostColorExcel"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="Test01PutColorId"/>
+          <include name="Test04GetColors"/>
+          <include name="Test02PostColor"/>
+        </methods>
+      </class> <!-- admin.ColorController -->
       <class name="admin.RemarkController">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
+          <include name="Test01Postremark"/>
           <include name="Test03RemarkCount"/>
         </methods>
       </class> <!-- admin.RemarkController -->
+      <class name="admin.PolishController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="test04Polishes"/>
+          <include name="test01PolishPolishId"/>
+          <include name="test03PolishExcel"/>
+          <include name="test02Polish"/>
+        </methods>
+      </class> <!-- admin.PolishController -->
       <class name="admin.ImageController">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="Test03GetFetchImages"/>
+          <include name="Test04GetBulkBidThumbnailLogo"/>
+          <include name="Test01GetTopbarLogo"/>
           <include name="Test02GetImages"/>
         </methods>
       </class> <!-- admin.ImageController -->
-      <class name="admin.BrandController">
+      <class name="admin.AuctionController">
         <methods>
-          <include name="beforeSuite"/>
           <include name="afterSuite"/>
-          <include name="test04PostBrandExcel"/>
-        </methods>
-      </class> <!-- admin.BrandController -->
-      <class name="admin.BidController">
-        <methods>
+          <include name="test11GetAuctionsJewellery"/>
+          <include name="test06GetAuctions"/>
+          <include name="test12GetAuctionsInactive"/>
+          <include name="test14GetSAuctionFinishedDiamond"/>
+          <include name="test07GetAuctionView"/>
+          <include name="test02DeleteAuctionId"/>
+          <include name="test09GetAuctionsUpcomingJewellery"/>
+          <include name="test15GetAuctionsFinishedAndEndDiamond"/>
+          <include name="test18GetAuctionByActive"/>
           <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="Test08GetMyBid"/>
-          <include name="Test01PutBidUpdate"/>
-          <include name="Test06GetBidCount"/>
-          <include name="Test09GetLoseCount"/>
+          <include name="test08GetAuctionsUpcoming"/>
+          <include name="test17GetAuctionsDiamond"/>
+          <include name="test10GetAuctionsUpcomingDiamond"/>
+          <include name="test04PostAuctionSupplierUpdateEmails"/>
+          <include name="test05PostAuctionSentEmails"/>
+          <include name="test01PutAuctionId"/>
+          <include name="test16GetAuctionsEvents"/>
+          <include name="test13GetAuctionsFinishedJewellery"/>
+          <include name="test03PostAuction"/>
         </methods>
-      </class> <!-- admin.BidController -->
-      <class name="admin.LotDiamondBidController">
-        <methods>
-          <include name="test11GetMyBids"/>
-          <include name="beforeSuite"/>
-          <include name="test08LotDiamondGetWinBids"/>
-          <include name="afterSuite"/>
-          <include name="test07LotDiamondFavourites"/>
-          <include name="test12GetLoseBids"/>
-          <include name="test04LotDiamondRemark"/>
-        </methods>
-      </class> <!-- admin.LotDiamondBidController -->
-      <class name="admin.GSBController">
-        <methods>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-          <include name="loginToSystem"/>
-        </methods>
-      </class> <!-- admin.GSBController -->
+      </class> <!-- admin.AuctionController -->
       <class name="admin.CutController">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
+          <include name="test01PutCutId"/>
+          <include name="test03PostCutExcel"/>
+          <include name="test04GetCuts"/>
           <include name="test02PostCut"/>
         </methods>
       </class> <!-- admin.CutController -->
@@ -120,6 +184,7 @@
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
+          <include name="Test02GetSlots"/>
           <include name="Test01PostSlotTransaction"/>
         </methods>
       </class> <!-- admin.ReservationController -->
@@ -137,23 +202,143 @@
           <include name="Test03LabExcel"/>
           <include name="afterSuite"/>
           <include name="Test02Lab"/>
+          <include name="Test01LabLabId"/>
+          <include name="Test04Labs"/>
         </methods>
       </class> <!-- admin.LabController -->
-      <class name="admin.FluoresceneController">
-        <methods>
-          <include name="test02PostFluorescene"/>
-          <include name="beforeSuite"/>
-          <include name="afterSuite"/>
-        </methods>
-      </class> <!-- admin.FluoresceneController -->
       <class name="admin.LotController">
         <methods>
           <include name="beforeSuite"/>
           <include name="afterSuite"/>
           <include name="test07BiddersPdf"/>
           <include name="test06DownloadLotExcel"/>
+          <include name="test01LotidAmount"/>
         </methods>
       </class> <!-- admin.LotController -->
+      <class name="admin.ClarityController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="test04GetClarities"/>
+          <include name="test01PutClarityId"/>
+          <include name="test02PostClarity"/>
+          <include name="test03PostClarityExcel"/>
+        </methods>
+      </class> <!-- admin.ClarityController -->
+      <class name="admin.MailInvoiceLotDiamondController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="Test02PostSendmailEmailIdAuctionID"/>
+          <include name="Test01PostSendmails"/>
+          <include name="Test03PostSendMailsAllLots"/>
+        </methods>
+      </class> <!-- admin.MailInvoiceLotDiamondController -->
+      <class name="admin.BrandController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="test02GetBrand"/>
+          <include name="test01PutBrand"/>
+          <include name="test03PostBrand"/>
+          <include name="test05GetBrands"/>
+        </methods>
+      </class> <!-- admin.BrandController -->
+      <class name="admin.BidController">
+        <methods>
+          <include name="Test13GetBidDelete"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="Test08GetMyBid"/>
+          <include name="Test01PutBidUpdate"/>
+          <include name="Test04GetBiddersInfo"/>
+          <include name="Test06GetBidCount"/>
+          <include name="Test09GetLoseCount"/>
+          <include name="Test12GetBidHistory"/>
+          <include name="Test02PutBidUpdateJewellery"/>
+          <include name="Test03PostMakeWinners"/>
+          <include name="Test11GetAllCounts"/>
+        </methods>
+      </class> <!-- admin.BidController -->
+      <class name="admin.BalanceSheetController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="Test01BalanceSheet"/>
+        </methods>
+      </class> <!-- admin.BalanceSheetController -->
+      <class name="admin.rapaportController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="Test02rapaports"/>
+          <include name="Test01LotDiamondrapPrice"/>
+        </methods>
+      </class> <!-- admin.rapaportController -->
+      <class name="admin.LotDiamondBidController">
+        <methods>
+          <include name="test08LotDiamondGetWinBids"/>
+          <include name="afterSuite"/>
+          <include name="test03LotDiamondSearchPage"/>
+          <include name="test09LotDiamondGetMyStockData"/>
+          <include name="test12GetLoseBids"/>
+          <include name="test06LotDiamondLiveBids"/>
+          <include name="test04LotDiamondRemark"/>
+          <include name="test02LotDiamondSearch"/>
+          <include name="test11GetMyBids"/>
+          <include name="beforeSuite"/>
+          <include name="test07LotDiamondFavourites"/>
+          <include name="test10GetMyBidStatusData"/>
+          <include name="test05LotDiamondLotId"/>
+          <include name="test01LotDiamondNegotiation"/>
+        </methods>
+      </class> <!-- admin.LotDiamondBidController -->
+      <class name="admin.FilterController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="test01GetFilter"/>
+        </methods>
+      </class> <!-- admin.FilterController -->
+      <class name="admin.InvoiceListController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="test01GetPastInvoiceList"/>
+          <include name="test03GetHoldInvoiceList"/>
+          <include name="test02GetInvoiceList"/>
+        </methods>
+      </class> <!-- admin.InvoiceListController -->
+      <class name="admin.FluoresceneController">
+        <methods>
+          <include name="test02PostFluorescene"/>
+          <include name="beforeSuite"/>
+          <include name="test01PutFluoresceneID"/>
+          <include name="tset03PostFluoresceneExcel"/>
+          <include name="afterSuite"/>
+          <include name="test04GetFluorescenes"/>
+        </methods>
+      </class> <!-- admin.FluoresceneController -->
+      <class name="admin.CountryController">
+        <methods>
+          <include name="test03PostCountry"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="test02PutCountryId"/>
+          <include name="test01GetCountryId"/>
+          <include name="test04GetCountries"/>
+        </methods>
+      </class> <!-- admin.CountryController -->
+      <class name="admin.ShapeController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="testcreateSymmetry04"/>
+          <include name="testcreateSymmetry03"/>
+          <include name="testcreateSymmetry02"/>
+          <include name="testcreateSymmetry01"/>
+        </methods>
+      </class> <!-- admin.ShapeController -->
     </classes>
   </test> <!-- admin(failed) -->
 </suite> <!-- Failed suite [Suite] -->

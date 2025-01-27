@@ -1,8 +1,8 @@
 package admin;
 
+import java.io.File;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -10,7 +10,6 @@ import utils.BaseTest;
 import utils.Constant;
 
 public class BidController extends BaseTest {
-	
 	@Test
 	public void Test01PutBidUpdate() {
 
@@ -29,10 +28,10 @@ public class BidController extends BaseTest {
 
 		// Create the JSON body for the PUT request
 
-		String jsonBody = "{\n" + "  \"lotId\": \"ca731c4d-b682-464a-8592-fac7c4963b42\",\n"
-				+ "  \"auctionId\": \"4455d306-e388-44cd-b1d7-628b6e349a43\",\n"
-				+ "  \"userId\": \"d6fc4bc1-3b3b-4531-84b7-dd9ac924922e\",\n" 
-				+ "  \"currencyBidAmount\": 0,\n"
+		String jsonBody = "{\n" + "  \"lotId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n"
+				+ "  \"auctionId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n"
+				+ "  \"userId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n" + "  \"currencyBidAmount\": 0,\n"
+				+ "  \"bidDateTime\": \"2024-12-12T07:27:06.973Z\",\n" + "  \"close\": true,\n" + "  \"active\": true\n"
 				+ "}";
 
 		// Add the JSON body to the request
@@ -44,6 +43,12 @@ public class BidController extends BaseTest {
 		// request//.pathParam("userId", userId)
 		// .pathParam("auctionId", auctionId);
 
+		String proxyBidId = "aa11b4c1-86bb-4843-9628-1a45d61cb7bf";
+	    String proxyBidAmount = "100000";
+
+	    request.pathParam("proxyBidId", proxyBidId);
+	    request.pathParam("proxyBidAmount", proxyBidAmount);
+		
 		// Send the PUT request
 		Response response = request.put("/bid/update/{proxyBidId}/{proxyBidAmount}");
 
@@ -70,7 +75,6 @@ public class BidController extends BaseTest {
 		// Assert that the status code is 200 (OK)
 		Assert.assertTrue(statusCode == 200, "Expected 200 OK, but got: " + statusCode);
 	}
-
 	@Test
 	public void Test02PutBidUpdateJewellery() {
 
@@ -194,7 +198,6 @@ public class BidController extends BaseTest {
 		// Replace 'your_token_here' with the actual Bearer token you received
 		// Add Authorization header for Bearer Token Authentication
 		String token = Constant.authToken;
-		System.out.println("Test Token: " + token);
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
 
 		// Optional: Set headers if required
@@ -247,15 +250,16 @@ public class BidController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		// Add Authorization header for Bearer Token Authentication
+		// Replace 'your_token_here' with the actual Bearer token you received
+		// Add Authorization header for Bearer Token Authentication
 		String token = Constant.authToken;
-		System.out.println("Test Token: " + token);
-		
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
-		
+
 		// Optional: Set headers if required
 		request.header("Content-Type", "application/json");
 
-		String userId = "d6fc4bc1-3b3b-4531-84b7-dd9ac924922e";
+		String userId = "7828500F-5781-40D5-9E61-ADF2A09EB993";
 		String auctionId = "d68848a2-67a3-453f-85af-2a0aaa14b9e2";
 		// String countryId = "435a09ab-ad6e-11ef-8d40-c8d3ffbc6ac6";
 //  String supplierId = "88be816b-c3e9-432b-9111-45af8ba70bfb"; 

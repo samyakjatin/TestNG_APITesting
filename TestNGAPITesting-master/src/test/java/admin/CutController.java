@@ -1,6 +1,8 @@
 package admin;
 
 import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -89,6 +91,8 @@ public void test02PostCut() {
         // Set the Content-Type header to application/json
         request.header("Content-Type", "application/json");  
         
+        String uniqueName = "Jatin" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+        
         // Create the JSON body for the POST request
         String jsonBody = "{\n" +
                          
@@ -96,7 +100,7 @@ public void test02PostCut() {
                           "  \"code\": \"string\",\n" +
                           "  \"srNo\": 0,\n" +
                           "  \"cutId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n" +
-                          "  \"name\": \"Jatin\",\n" +
+                          "  \"name\": \""+uniqueName+"\",\n" +
                           "  \"count\": 0,\n" +
                           "  \"createDate\": \"string\"\n" +  // Removed the trailing comma here
                           "}";
