@@ -22,8 +22,9 @@ public class BidderSupplierSummaryController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		String token = Constant.authToken;
 
@@ -79,9 +80,9 @@ public class BidderSupplierSummaryController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
 
+		request.body(encryptedCredentials);
 		String token = Constant.authToken;
 
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
@@ -136,9 +137,9 @@ public class BidderSupplierSummaryController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
 
+		request.body(encryptedCredentials);
 		String token = Constant.authToken;
 
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
@@ -189,15 +190,15 @@ public class BidderSupplierSummaryController extends BaseTest {
 	}
 
 	@Test
-	public void test04GetBiddersSummary() {
+	public void Test04GetBiddersSummary() { //Needs to change AuctionId every time
 
 		// Set the base URI
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
+		String encryptedCredentials = Constant.adminCredentials; 
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
-
+		request.body(encryptedCredentials);
+	
 		String token = Constant.authToken;
 
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
@@ -206,7 +207,7 @@ public class BidderSupplierSummaryController extends BaseTest {
 		request.header("Content-Type", "application/json");
 
 		// String userId="7828500F-5781-40D5-9E61-ADF2A09EB993";
-		String auctionId = "697d6da3-6bf3-4e82-b25a-0c98fc1c69fe";
+		String auctionId = "693c945d-da0a-4e41-b93a-081e0f033662";
 		// String countryId = "435a09ab-ad6e-11ef-8d40-c8d3ffbc6ac6";
 		// String supplierId = "88be816b-c3e9-432b-9111-45af8ba70bfb";
 		// String boxNo = "BOX1";

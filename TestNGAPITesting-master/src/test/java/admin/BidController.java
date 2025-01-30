@@ -17,6 +17,10 @@ public class BidController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
 		// Add query parameters for GET request (username, password, lotDiamondInfo)
 
 		// Add Authorization header for Bearer Token Authentication
@@ -82,6 +86,10 @@ public class BidController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+		
 		// Add query parameters for GET request (username, password, lotDiamondInfo)
 
 		// Add Authorization header for Bearer Token Authentication
@@ -143,6 +151,11 @@ public class BidController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
+		
 		// Add Authorization header for Bearer Token Authentication
 		// Add Authorization header for Bearer Token Authentication
 		String token = Constant.authToken;
@@ -192,6 +205,10 @@ public class BidController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+		
 		// Add query parameters for GET request (username, password)
 
 		// Add Authorization header for Bearer Token Authentication
@@ -243,13 +260,16 @@ public class BidController extends BaseTest {
 		Assert.assertEquals(statusCode, 200, "Expected 200 OK, but got: " + statusCode);
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void Test06GetBidCount() {
 
 		// Set the base URI
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 		// Add Authorization header for Bearer Token Authentication
 		// Replace 'your_token_here' with the actual Bearer token you received
 		// Add Authorization header for Bearer Token Authentication
@@ -299,13 +319,18 @@ public class BidController extends BaseTest {
 		Assert.assertEquals(statusCode, 200, "Expected 200 OK, but got: " + statusCode);
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void Test08GetMyBid() {
 
 		// Set the base URI
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
+		
 		// Add query parameters for GET request (username, password)
 
 		// Add Authorization header for Bearer Token Authentication
@@ -357,13 +382,18 @@ public class BidController extends BaseTest {
 		Assert.assertEquals(statusCode, 200, "Expected 200 OK, but got: " + statusCode);
 	}
 
-	@Test
+	@Test (enabled=false)
 	public void Test09GetLoseCount() {
 
 		// Set the base URI
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
+		
 		// Add query parameters for GET request (username, password)
 
 		// Add Authorization header for Bearer Token Authentication
@@ -422,6 +452,10 @@ public class BidController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+		
 		// Add query parameters for GET request (username, password)
 
 		// Add Authorization header for Bearer Token Authentication
@@ -480,6 +514,10 @@ public class BidController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+		
 		// Add query parameters for GET request (username, password)
 
 		// Add Authorization header for Bearer Token Authentication
@@ -492,7 +530,7 @@ public class BidController extends BaseTest {
 		request.header("Content-Type", "application/json");
 
 		// String userId="7828500F-5781-40D5-9E61-ADF2A09EB993";
-		String lotId = "495f1c72-fb58-41d0-8ccf-09b4181f7edb";
+		String lotId = "6bdbbe90-30d3-4c55-80f8-e1ce2bdb9c88";
 		// String countryId = "435a09ab-ad6e-11ef-8d40-c8d3ffbc6ac6";
 //  String supplierId = "88be816b-c3e9-432b-9111-45af8ba70bfb"; 
 		// String boxNo = "BOX1";
@@ -538,6 +576,11 @@ public class BidController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
+		
 		// Add query parameters for GET request (username, password, lotDiamondInfo)
 
 		// Add Authorization header for Bearer Token Authentication

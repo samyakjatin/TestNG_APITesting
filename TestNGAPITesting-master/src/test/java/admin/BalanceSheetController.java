@@ -17,6 +17,10 @@ public class BalanceSheetController extends BaseTest {
 		// Set the base URI
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
+		
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		// Add query parameters for GET request (username, password, lotDiamondInfo)
 

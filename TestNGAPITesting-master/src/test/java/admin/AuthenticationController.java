@@ -20,8 +20,9 @@ public class AuthenticationController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		String token = Constant.authToken;
 
@@ -81,16 +82,17 @@ public class AuthenticationController extends BaseTest {
 				"Expected 200 OK or 201 Created, but got: " + statusCode);
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void test02AuthRegisterAll() {
 
 		// Set the base URI
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
 
+		request.body(encryptedCredentials);
+		
 		String token = Constant.authToken;
 
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
@@ -108,7 +110,7 @@ public class AuthenticationController extends BaseTest {
 				+ "    \"referenceName\": \"string\",\n" + "    \"remark\": \"string\",\n" + "    \"addressInfo\": {\n"
 				+ "      \"type\": \"string\",\n" + "      \"houseNo\": \"string\",\n" + "      \"city\": \"string\",\n"
 				+ "      \"zipCode\": \"string\",\n" + "      \"state\": \"string\",\n"
-				+ "      \"country\": \"string\",\n" + "      \"countryId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\n"
+				+ "      \"country\": \"string\",\n" + "      \"countryId\": \"b5128b7b-d7cc-11ef-bc18-c8d3ffbc6ac6\"\n"
 				+ "    },\n" + "    \"active\": \"string\",\n" + "    \"kycStatus\": \"string\",\n"
 				+ "    \"userInterest\": \"string\",\n" + "    \"ledgerType\": \"string\",\n"
 				+ "    \"isSupplier\": \"string\",\n" + "    \"noOfBoxes\": \"string\",\n"

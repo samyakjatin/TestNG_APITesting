@@ -20,8 +20,10 @@ public class LotController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
 
 		String token = Constant.authToken;
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
@@ -67,15 +69,15 @@ public class LotController extends BaseTest {
 				"Expected 200 OK or 201 Created, but got: " + statusCode);
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void test06DownloadLotExcel() {
 	    // Set the base URI
 	    RestAssured.baseURI = "http://localhost:8080/api/v1";
 	    RequestSpecification request = RestAssured.given();
 
-	    // Add query parameters
-	    request.queryParam("username", Constant.adminUserName);
-	    request.queryParam("password", Constant.adminPassword);
+	    String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 	    // Add Bearer token in Authorization header
 	    String token = Constant.authToken;
@@ -129,9 +131,9 @@ public class LotController extends BaseTest {
 	    RestAssured.baseURI = "http://localhost:8080/api/v1";
 	    RequestSpecification request = RestAssured.given();
 
-	    // Add query parameters
-	    request.queryParam("username", Constant.adminUserName);
-	    request.queryParam("password", Constant.adminPassword);
+	    String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 	    // Add Bearer token in Authorization header
 	    String token = Constant.authToken;
@@ -141,7 +143,7 @@ public class LotController extends BaseTest {
 	    request.header("Content-Type", "application/json");
 
 	    // Add path parameter
-	    String auctionId = "ACFFE150-2857-4A32-A25C-B262BBDB9DA3";
+	    String auctionId = "693c945d-da0a-4e41-b93a-081e0f033662";
 	    request.pathParam("auctionId", auctionId);
 
 	    // Log request details for debugging

@@ -17,10 +17,11 @@ public class ColorController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password, lotDiamondInfo)
+		
+		String encryptedCredentials = Constant.adminCredentials; 
 
-		// Add Authorization header for Bearer Token Authentication
-		// Add Authorization header for Bearer Token Authentication
+		request.body(encryptedCredentials);
+		
 		String token = Constant.authToken;
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
 
@@ -77,8 +78,10 @@ public class ColorController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add Authorization header for Bearer Token Authentication
-		// Add Authorization header for Bearer Token Authentication
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+		
 		String token = Constant.authToken;
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
 
@@ -129,7 +132,10 @@ public class ColorController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-//Add Authorization header for Bearer Token Authentication
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+		
 		String token = Constant.authToken;
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
 
@@ -165,11 +171,10 @@ public class ColorController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-// Add query parameters for GET request (username, password)
+		String encryptedCredentials = Constant.adminCredentials; 
 
-// Add Authorization header for Bearer Token Authentication
-// Replace 'your_token_here' with the actual Bearer token you received
-//Add Authorization header for Bearer Token Authentication
+		request.body(encryptedCredentials);
+		
 		String token = Constant.authToken;
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
 

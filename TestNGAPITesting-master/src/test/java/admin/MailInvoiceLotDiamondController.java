@@ -17,6 +17,10 @@ public class MailInvoiceLotDiamondController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+		
 		String token = Constant.authToken;
 
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
@@ -74,6 +78,10 @@ public class MailInvoiceLotDiamondController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+		
 		// Add Authorization header for Bearer Token Authentication
 		String token = Constant.authToken;
 
@@ -133,13 +141,18 @@ public class MailInvoiceLotDiamondController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
+		
 		// Add Authorization header for Bearer Token Authentication
 		String token = Constant.authToken;
 
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
 
 		// String userId = "7828500F-5781-40D5-9E61-ADF2A09EB993";
-		String auctionId = "697d6da3-6bf3-4e82-b25a-0c98fc1c69fe";
+		String auctionId = "693c945d-da0a-4e41-b93a-081e0f033662";
 		// String emailId = "samyakjatin2032@gmail.com";
 		// Add path parameters dynamically
 		// request.pathParam("userId", userId);

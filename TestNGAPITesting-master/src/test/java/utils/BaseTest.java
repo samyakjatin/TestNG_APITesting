@@ -13,44 +13,34 @@ public class BaseTest {
 
 	@BeforeSuite
 	public void beforeSuite() {
-	    try {
-	        System.out.println("BeforeSuite");
 
-	        RestAssured.baseURI = "http://localhost:8080/api/v1";
-	        RequestSpecification request = RestAssured.given();
+		System.out.println("BeforeSuite");
 
-	        JSONObject requestParams = new JSONObject();
-	        requestParams.put("username", Constant.adminUserName);
-	        requestParams.put("password", Constant.adminPassword);
+		RestAssured.baseURI = "http://localhost:8080/api/v1";
+		RequestSpecification request = RestAssured.given();
 
-	        request.header("Content-Type", "application/json");
-	        request.body(requestParams.toString());
+		JSONObject requestParams = new JSONObject();
+		String encryptedCredentials = Constant.adminCredentials; 
 
-	        Response response = request.post("/auth/authenticate");
-	        System.out.println("The status received: " + response.statusLine());
+	    request.queryParam("payload", encryptedCredentials);
 
-	        int statusCode = response.getStatusCode();
-	        String responseBody = response.getBody().asString();
+		request.header("Content-Type", "application/json"); // Add the Json to the body of the request
+		request.body(encryptedCredentials);
 
-	        if (responseBody == null || responseBody.isEmpty()) {
-	            throw new RuntimeException("Response body is null or empty.");
-	        }
+		Response response = request.post("/auth/authenticate");
+		System.out.println("The status received: " + response.statusLine());
 
-	        JSONObject jsonObject = new JSONObject(responseBody);
-	        if (!jsonObject.has("accessToken")) {
-	            throw new RuntimeException("Response JSON does not contain 'accessToken'.");
-	        }
+		System.out.println("---------------Response---------------");
+		System.out.println();
+		int statusCode = response.getStatusCode();
+		System.out.println(statusCode);
+		System.out.println(response.getBody().asString());
 
-	        Constant.authToken = jsonObject.getString("accessToken");
-	        System.out.println("Before suite Token: " + Constant.authToken);
-	        Assert.assertEquals(statusCode, 200);
+		JSONObject jsonObject = new JSONObject(response.getBody().asString());
+		Constant.authToken = (String) jsonObject.get("accessToken");
 
-	    } catch (Exception e) {
-	        e.printStackTrace();
-	        throw new RuntimeException("Error in @BeforeSuite: " + e.getMessage(), e);
-	    }
+		Assert.assertEquals(statusCode, 200);
 	}
-
 
 	@AfterSuite
 	public void afterSuite() {

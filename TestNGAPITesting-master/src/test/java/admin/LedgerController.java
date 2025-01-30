@@ -20,8 +20,9 @@ public class LedgerController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		String token = Constant.authToken;
 
@@ -83,8 +84,10 @@ public class LedgerController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
 
 		String token = Constant.authToken;
 
@@ -92,22 +95,14 @@ public class LedgerController extends BaseTest {
 
 		// Set the Content-Type header to application/json
 		request.header("Content-Type", "application/json");
-		String uniqueName = "india" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+		String uniqueName = "Tax" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
 		// Create the JSON body for the POST request
 		String jsonBody = "{\n" +
-			    "  \"ledgerType\": \"string\",\n" +
-			    "  \"ledgerAmount\": 0,\n" +
-			    "  \"companyName\": \"string\",\n" +
-			    "  \"ledgerId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n" +
-			    "  \"name\": \"" + uniqueName + "\",\n" +
-			    "  \"desc\": \"string\",\n" +
-			    "  \"code\": \"string\",\n" +
-			    "  \"srNo\": 0,\n" +
-			    "  \"countryName\": \"string\",\n" +
-			    "  \"percentage\": 0,\n" +
-			    "  \"active\": true,\n" +
-			    "  \"countryId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\"\n" +
-			    "}";
+                "  \"countryName\": \"India\",\n" +
+                "  \"name\": \""+uniqueName+"\",\n" +
+                "  \"percentage\": \"20\"\n" +
+                "}";
+
 
 
 		// Add the JSON body to the request
@@ -146,9 +141,11 @@ public class LedgerController extends BaseTest {
 		// Set the base URI
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
+		
+		String encryptedCredentials = Constant.adminCredentials; 
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		request.body(encryptedCredentials);
+
 
 		String token = Constant.authToken;
 

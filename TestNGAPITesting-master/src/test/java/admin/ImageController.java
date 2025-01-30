@@ -18,7 +18,10 @@ public class ImageController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password, lotDiamondInfo)
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
 
 		// Add Authorization header for Bearer Token Authentication
 		// Add Authorization header for Bearer Token Authentication
@@ -69,10 +72,13 @@ public class ImageController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password, lotDiamondInfo)
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
 
 	
-		request.queryParam("keys", "NovP1001-2.jpg,NovP1001-3.jpg,NovP1001-1.jpg");
+		request.queryParam("keys", "DT1055922-1.JPG,DT1055922-2.JPG,DT1055922-3.JPG");
 
 		// Add Authorization header for Bearer Token Authentication
 		// Add Authorization header for Bearer Token Authentication
@@ -123,9 +129,11 @@ public class ImageController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password, lotDiamondInfo)
+		String encryptedCredentials = Constant.adminCredentials; 
 
-		request.queryParam("keys", "NovP1001-2.jpg,NovP1001-3.jpg,NovP1001-1.jpg");
+		request.body(encryptedCredentials);
+
+		request.queryParam("keys", "DT1055922-1.JPG,DT1055922-2.JPG,DT1055922-3.JPG");
 
 		// Add Authorization header for Bearer Token Authentication
 		// Add Authorization header for Bearer Token Authentication
@@ -176,7 +184,10 @@ public class ImageController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password, lotDiamondInfo)
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
 
 		// Add Authorization header for Bearer Token Authentication
 		// Add Authorization header for Bearer Token Authentication

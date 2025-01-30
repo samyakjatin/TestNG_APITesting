@@ -1,5 +1,8 @@
 package admin;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -18,8 +21,9 @@ public class CompanyController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		String token = Constant.authToken;
 
@@ -82,8 +86,9 @@ public class CompanyController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		String token = Constant.authToken;
 
@@ -126,22 +131,35 @@ public class CompanyController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		 String encryptedCredentials = Constant.adminCredentials; 
 
+		    
+		    request.body(encryptedCredentials);
 		String token = Constant.authToken;
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
 
 		request.header("Content-Type", "application/json");
 
+		String uniqueName = "Japan Auction House" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
+		
 		// Create the JSON body for the POST request
-		String jsonBody = "{\n" + "  \"companyId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa6\",\n"
-				+ "  \"name\": \"Japan\",\n" + "  \"englishName\": \"string\",\n" + "  \"description\": \"string\",\n"
-				+ "  \"address1\": \"string\",\n" + "  \"address2\": \"string\",\n" + "  \"address3\": \"string\",\n"
-				+ "  \"code\": \"string\",\n" + "  \"srNo\": 0,\n" + "  \"bankAcName\": \"string\",\n"
-				+ "  \"bankCode\": \"string\",\n" + "  \"bankName\": \"string\",\n"
-				+ "  \"bankAcNumber\": \"string\",\n" + "  \"active\": true\n" + // Removed the trailing comma here
-				"}";
+		String jsonBody = "{\n" +
+			    "  \"companyId\": \"839961ab-d237-11ef-b309-c8d3ffbc6ac6 \",\n" +
+			    "  \"name\": \""+uniqueName+"\",\n" +
+			    "  \"englishName\": \"India Auction House\",\n" +
+			    "  \"description\": \"India Auction House\",\n" +
+			    "  \"address1\": \"India\",\n" +
+			    "  \"address2\": \"Japan\",\n" +
+			    "  \"address3\": \"Japan\",\n" +
+			    "  \"code\": \"JAH\",\n" +
+			    "  \"srNo\": 1,\n" +
+			    "  \"accountNumber\": \"408-9118269\",\n" +
+			    "  \"bankCode\": \"MHCBJPJT\",\n" +
+			    "  \"bankName\": \"MIZUHO BANK , KOFU BRANCH\",\n" +
+			    "  \"bankAddress\": \"1-19-10 MARUNOUCHI, KOFU, YAMANASHI, JAPAN 4000031. TEL # 81 552371511\",\n" +
+			    "  \"active\": 1\n" +
+			    "}";
+
 
 		// Add the JSON body to the request
 		request.body(jsonBody);
@@ -174,3 +192,4 @@ public class CompanyController extends BaseTest {
 				"Expected 200 OK or 201 Created, but got: " + statusCode);
 	}
 }
+

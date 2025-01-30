@@ -17,8 +17,9 @@ public class AnnouncementController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		String token = Constant.authToken;
 
@@ -83,9 +84,9 @@ public class AnnouncementController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
 
+		request.body(encryptedCredentials);
 		String token = Constant.authToken;
 
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
@@ -149,9 +150,10 @@ public class AnnouncementController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
 
+		request.body(encryptedCredentials);
+		
 		String token = Constant.authToken;
 
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
@@ -200,11 +202,9 @@ public class AnnouncementController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		System.out.println("User Name: " + Constant.adminUserName);
-		System.out.println("Password: " + Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		request.body(encryptedCredentials);
 
 		System.out.println("Password: " + Constant.authToken);
 		String token = Constant.authToken;
@@ -258,8 +258,9 @@ public class AnnouncementController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		String token = Constant.authToken;
 
@@ -309,8 +310,9 @@ public class AnnouncementController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		String token = Constant.authToken;
 

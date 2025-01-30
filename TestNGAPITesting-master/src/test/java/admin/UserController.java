@@ -1,5 +1,7 @@
 package admin;
 
+import java.io.File;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -17,8 +19,9 @@ class UserController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		request.queryParam("username", Constant.adminUserName);
-		request.queryParam("password", Constant.adminPassword);
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		String token = Constant.authToken;
 
@@ -56,6 +59,45 @@ class UserController extends BaseTest {
 		// valid
 		Assert.assertEquals(statusCode, 200, "Expected 200 OK, but got: " + statusCode);
 	}
+	
+	@Test
+	public void UpdateUserUpload() {
+
+		// Set the base URI
+		RestAssured.baseURI = "http://localhost:8080/api/v1";
+		RequestSpecification request = RestAssured.given();
+
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+		
+		// Add Authorization header for Bearer Token Authentication
+		String token = Constant.authToken;
+		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
+
+		// Set the Content-Type header to multipart/form-data for file upload
+		request.header("Content-Type", "multipart/form-data");
+
+		// Specify the file to upload (replace with your actual file path)
+		File file = new File("C:\\Users\\ESAMYAK121\\Desktop\\Testing\\user_data.xlsx"); 
+
+		// Add the file as part of the multipart request
+		request.multiPart("file", file);
+
+		// Send the POST request
+		Response response = request.post("/update/users/upload");
+
+		// Print the response status and body for debugging
+		System.out.println("The status received: " + response.statusLine());
+		System.out.println("Response: " + response.getBody().asString()); // Added response logging
+		System.out.println("---------------Response Details---------------");
+		int statusCode = response.getStatusCode();
+		System.out.println("Status Code: " + statusCode);
+
+		// Assert that the status code is 200 (OK) or 201 (Created)
+		Assert.assertTrue(statusCode == 200 || statusCode == 201,
+				"Expected 200 OK or 201 Created, but got: " + statusCode);
+	}
 
 	@Test(enabled=false)
 	public void test05UpdateUploadedUsers() {
@@ -64,9 +106,9 @@ class UserController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password)
-		request.queryParam("username", "dhaval.sharma");
-		request.queryParam("password", "samyak@2024");
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		// Add Authorization header for Bearer Token Authentication
 		// Replace 'your_token_here' with the actual Bearer token you received
@@ -76,7 +118,7 @@ class UserController extends BaseTest {
 		// Optional: Set headers if required
 		request.header("Content-Type", "application/json");
 
-		String userId = "40c0b5cd-92e9-4fa7-b552-696e30f2a156";
+		String userId = "b0f0bc59-9196-4ee0-b5b3-e2dadb1341c7";
 		// String auctionId = "ACFFE150-2857-4A32-A25C-B262BBDB9DA3";
 
 		// Add path parameters dynamically
@@ -117,9 +159,9 @@ class UserController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password)
-		request.queryParam("username", "dhaval.sharma");
-		request.queryParam("password", "samyak@2024");
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		// Add Authorization header for Bearer Token Authentication
 		// Replace 'your_token_here' with the actual Bearer token you received
@@ -170,9 +212,9 @@ class UserController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password)
-		request.queryParam("username", "dhaval.sharma");
-		request.queryParam("password", "samyak@2024");
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		// Add Authorization header for Bearer Token Authentication
 		// Replace 'your_token_here' with the actual Bearer token you received
@@ -223,9 +265,10 @@ class UserController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password)
-		request.queryParam("username", "dhaval.sharma");
-		request.queryParam("password", "samyak@2024");
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
 
 		// Add Authorization header for Bearer Token Authentication
 		// Replace 'your_token_here' with the actual Bearer token you received
@@ -276,9 +319,9 @@ class UserController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password)
-		request.queryParam("username", "dhaval.sharma");
-		request.queryParam("password", "samyak@2024");
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		// Add Authorization header for Bearer Token Authentication
 		// Replace 'your_token_here' with the actual Bearer token you received
@@ -329,9 +372,9 @@ class UserController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password)
-		request.queryParam("username", "dhaval.sharma");
-		request.queryParam("password", "samyak@2024");
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
 
 		// Add Authorization header for Bearer Token Authentication
 		// Replace 'your_token_here' with the actual Bearer token you received
@@ -382,9 +425,10 @@ class UserController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password)
-		request.queryParam("username", "dhaval.sharma");
-		request.queryParam("password", "samyak@2024");
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
 
 		// Add Authorization header for Bearer Token Authentication
 		// Replace 'your_token_here' with the actual Bearer token you received

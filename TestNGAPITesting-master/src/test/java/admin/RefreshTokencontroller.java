@@ -18,7 +18,10 @@ public class RefreshTokencontroller extends BaseTest{
 	        RequestSpecification request = RestAssured.given();
 	        
 	        
-	        // Add query parameters for GET request (username, password)
+	        String encryptedCredentials = Constant.adminCredentials; 
+
+			request.body(encryptedCredentials);
+
 	        
 	        
 	        // Add Authorization header for Bearer Token Authentication

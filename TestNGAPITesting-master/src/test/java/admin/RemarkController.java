@@ -16,6 +16,10 @@ public class RemarkController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+		
 		// Add Authorization header for Bearer Token Authentication
 		String token = Constant.authToken;
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
@@ -77,9 +81,9 @@ public class RemarkController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
-		// Add query parameters for GET request (username, password, lotDiamondInfo)
+		String encryptedCredentials = Constant.adminCredentials; 
 
-		// request.queryParam("lotJewelleryInfo", ""); // Add lotDiamondInfo parameter
+		request.body(encryptedCredentials);
 
 		// Add Authorization header for Bearer Token Authentication
 		String token = Constant.authToken;
@@ -131,6 +135,11 @@ public class RemarkController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+
+		
 		// Add Authorization header for Bearer Token Authentication
 		String token = Constant.authToken;
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header

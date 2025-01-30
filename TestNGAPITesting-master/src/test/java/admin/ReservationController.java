@@ -1,5 +1,8 @@
 package admin;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.restassured.RestAssured;
@@ -17,8 +20,10 @@ public class ReservationController extends BaseTest {
 			RestAssured.baseURI = "http://localhost:8080/api/v1";
 			RequestSpecification request = RestAssured.given();
 
-			// Add Authorization header for Bearer Token Authentication
-			// Add Authorization header for Bearer Token Authentication
+			String encryptedCredentials = Constant.adminCredentials; 
+
+			request.body(encryptedCredentials);
+
 			String token = Constant.authToken;
 			request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
 
@@ -26,23 +31,26 @@ public class ReservationController extends BaseTest {
 			request.header("Content-Type", "application/json");
 
 			// Create the JSON body for the POST request
+			//String uniqueName = "Japan Auction House" + LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddHHmmss"));
 			String jsonBody = "{\n" +
-				    "  \"auctionId\": \""+Constant.auctionId+"\",\n" +
-				    "  \"auctionName\": \"Test Auction\",\n" +
-				    "  \"viewingLastDate\": \"2025-01-04 00:00:00\",\n" +
-				    "  \"slots\": 1,\n" +
-				    "  \"maxCompaniesPerSlot\": 10,\n" +
-				    "  \"maxPeoplePerCompany\": 10,\n" +
-				    "  \"slotDetails\": [\n" +
-				    "    {\n" +
-				    "      \"slotStartTime\": \"5:13 PM\",\n" +
-				    "      \"slotEndTime\": \"10:13 PM\"\n" +
-				    "    }\n" +
-				    "  ],\n" +
-				    "  \"viewingDates\": [\n" +
-				    "    \"2025-01-03 00:00:00\"\n" +
-				    "  ]\n" +
-				    "}";
+	                "  \"auctionId\": \"056c2b5e-39fc-4ffd-b018-c3ed87d2fabf\",\n" +
+	                "  \"auctionName\": \"Diamond202520250129092452\",\n" +
+	                "  \"maxCompaniesPerSlot\": 5,\n" +
+	                "  \"maxPeoplePerCompany\": 2,\n" +
+	                "  \"slotDetails\": [\n" +
+	                "    {\n" +
+	                "      \"slotStartTime\": \"2:18 PM\",\n" +
+	                "      \"slotEndTime\": \"4:18 PM\"\n" +
+	                "    }\n" +
+	                "  ],\n" +
+	                "  \"slots\":3,\n" +
+	                "  \"viewingDates\": [\n" +
+	                "    \"2025-05-10 00:00:00\",\n" +
+	                "    \"2025-01-11 00:00:00\"\n" +
+	                "  ],\n" +
+	                "  \"viewingLastDate\": \"2025-01-11 00:00:00\"\n" +
+	                "}";
+
 
 
 			// Add the JSON body to the request
@@ -92,13 +100,17 @@ public class ReservationController extends BaseTest {
 		RestAssured.baseURI = "http://localhost:8080/api/v1";
 		RequestSpecification request = RestAssured.given();
 
+		String encryptedCredentials = Constant.adminCredentials; 
+
+		request.body(encryptedCredentials);
+		
 		// Add Authorization header for Bearer Token Authentication
 		String token = Constant.authToken;
 		request.header("Authorization", "Bearer " + token); // Add Bearer token in Authorization header
 
 		// Specify the auctionId as a path parameter
-		//String auctionId = "26f3e815-86d9-4637-8731-7f7a6842f441";
-		request.pathParam("auctionId", Constant.auctionId);
+		String auctionId = "056c2b5e-39fc-4ffd-b018-c3ed87d2fabf";
+		request.pathParam("auctionId", auctionId);
 
 		// Send the GET request
 		Response response = request.get("/slots/{auctionId}");
