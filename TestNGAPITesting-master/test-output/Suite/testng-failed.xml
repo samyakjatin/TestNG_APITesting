@@ -3,6 +3,34 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="admin(failed)">
     <classes>
+      <class name="admin.PolishController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="test03PolishExcel"/>
+        </methods>
+      </class> <!-- admin.PolishController -->
+      <class name="admin.FluoresceneController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="tset03PostFluoresceneExcel"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- admin.FluoresceneController -->
+      <class name="admin.CutController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="test03PostCutExcel"/>
+        </methods>
+      </class> <!-- admin.CutController -->
+      <class name="admin.ShapeController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="testcreateSymmetry03"/>
+        </methods>
+      </class> <!-- admin.ShapeController -->
       <class name="admin.ReservationTransactionController">
         <methods>
           <include name="beforeSuite"/>
@@ -10,6 +38,48 @@
           <include name="test01PostCreateReservation"/>
         </methods>
       </class> <!-- admin.ReservationTransactionController -->
+      <class name="admin.AutoBiddingController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="Test02PutAutoBidExcel"/>
+        </methods>
+      </class> <!-- admin.AutoBiddingController -->
+      <class name="admin.ClarityController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="test03PostClarityExcel"/>
+        </methods>
+      </class> <!-- admin.ClarityController -->
+      <class name="admin.ColorController">
+        <methods>
+          <include name="Test03PostColorExcel"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- admin.ColorController -->
+      <class name="admin.SymmetryController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+          <include name="test03SymmetryExcel"/>
+        </methods>
+      </class> <!-- admin.SymmetryController -->
+      <class name="admin.LabController">
+        <methods>
+          <include name="beforeSuite"/>
+          <include name="Test03LabExcel"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- admin.LabController -->
+      <class name="admin.ReservationController">
+        <methods>
+          <include name="Test03PostUpdateSlotTransaction"/>
+          <include name="beforeSuite"/>
+          <include name="afterSuite"/>
+        </methods>
+      </class> <!-- admin.ReservationController -->
     </classes>
   </test> <!-- admin(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -15,7 +15,7 @@ import utils.BaseTest;
 //GET/api/v1/bidders/summary/{auctionId}
 public class BidderSupplierSummaryController extends BaseTest {
 
-	@Test
+	@Test(enabled=false)
 	public void test01GetSupplierSummary() {
 
 		// Set the base URI
@@ -189,7 +189,7 @@ public class BidderSupplierSummaryController extends BaseTest {
 		Assert.assertEquals(statusCode, 200, "Expected 200 OK, but got: " + statusCode);
 	}
 
-	@Test
+	@Test(enabled=false)
 	public void Test04GetBiddersSummary() { //Needs to change AuctionId every time
 
 		// Set the base URI

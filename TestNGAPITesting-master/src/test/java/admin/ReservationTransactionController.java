@@ -37,7 +37,7 @@ public class  ReservationTransactionController extends BaseTest {
         request.header("Content-Type", "application/json");  
         
         String jsonBody = "{\n" +
-                "  \"auctionId\": \"693c945d-da0a-4e41-b93a-081e0f033662\",\n" +
+                "  \"auctionId\": \"2e7f6857-7e1f-4e44-a52e-9d7e6e08b3df\",\n" +
                 "  \"auctionName\": \"Diamond202520250129092452\",\n" +
                 "  \"noOfPersons\": 2,\n" +
                 "  \"slotDate\": \"2025-02-10 00:00:00.0\",\n" +

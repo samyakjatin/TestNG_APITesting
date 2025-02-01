@@ -5,6 +5,7 @@
 		thread-count="5"
 		name="admin">
 		<classes>
+		   <class name="admin.AutoBiddingController" />
 			<class name="admin.UserController" />
 			<class name="admin.AuctionController" />
 			<class name="admin.AuthenticationController" />
